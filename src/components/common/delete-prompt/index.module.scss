@@ -1,0 +1,15 @@
+.modalWrapper {
+  width: 350px;
+  height: auto;
+  background-color: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  p {
+    margin-bottom: 15px;
+  }
+  .buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,113 @@
+@import '../../../styles/resources.scss';
+
+.cardContainer-enabled {
+  margin: 16px 0;
+  cursor: pointer;
+  .stepperContainer-enabled {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .statusContainer-enabled {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 7%;
+    }
+
+    .contentContainer-enabled {
+      display: flex;
+      flex-direction: column;
+      width: 73%;
+    }
+
+    .buttonContainer-enabled {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      align-content: stretch;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.cardContainer-disabled {
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  margin: 16px 0;
+  box-shadow: none !important;
+  .stepperContainer-disabled {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .statusContainer-disabled {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 7%;
+    }
+
+    .contentContainer-disabled {
+      display: flex;
+      flex-direction: column;
+      color: $grey-color-400 !important;
+      width: 73%;
+    }
+
+    .buttonContainer-disabled {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      align-content: stretch;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardContainer-enabled {
+    .stepperContainer-enabled {
+      .statusContainer-enabled {
+        width: 10%;
+      }
+    }
+
+    .contentContainer-enabled {
+      .stepNumber-enabled {
+        color: $grey-color-400;
+      }
+
+      .stepDescription-enabled {
+        font-size: 16px;
+      }
+    }
+
+    .buttonContainer-enabled {
+    }
+  }
+
+  .cardContainer-disabled {
+    .stepperContainer-disabled {
+      .statusContainer-disabled {
+        width: 10%;
+      }
+    }
+
+    .contentContainer-disabled {
+      .stepNumber-disabled {
+        color: $grey-color-400;
+      }
+
+      .stepDescription-disabled {
+        font-size: 16px;
+        color: $grey-color-500;
+      }
+    }
+
+    .buttonContainer-disabled {
+    }
+  }
+}

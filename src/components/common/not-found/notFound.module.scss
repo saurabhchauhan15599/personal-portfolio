@@ -1,0 +1,39 @@
+@import '../../../styles/resources.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  color: #0b0a0a;
+
+  .img {
+    height: toRem(400);
+    width: auto;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .msg {
+    font-family: $font-family-avenir;
+    text-transform: uppercase;
+    font-size: toRem(20);
+
+    .link_text {
+      color: black;
+      word-spacing: 2px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: $error-color;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+const SVG_COLOR_BLACK = '#111111';
+const SVG_COLOR_WHITE = '#ffffff';
+const SVG_COLOR_BLUE = '#0078d4';
+const SVG_COLOR_GREEN = '#107c10';
+const SVG_COLOR_ORANGE = '#ca5010';
+const SVG_COLOR_PURPLE = '#5c2d91';
+const SVG_ERROR = '#DC362E';
+const SVG_INFO = '#555555';
+const SVG_COLOR_GREY = '#777777';
+const SVG_COLOR_YELLOW = '#ffb900';
+const SVG_COLOR_PINK = '#e3008c';
+const SVG_COLOR_TEAL = '#00aba9';
+const SVG_COLOR_SKY = '#2E63FA';
+const SVG_COLOR_GRASS = '#498205';
+
+export {
+  SVG_COLOR_BLACK,
+  SVG_COLOR_BLUE,
+  SVG_COLOR_GRASS,
+  SVG_COLOR_GREEN,
+  SVG_COLOR_GREY,
+  SVG_COLOR_ORANGE,
+  SVG_COLOR_PINK,
+  SVG_COLOR_PURPLE,
+  SVG_COLOR_SKY,
+  SVG_COLOR_TEAL,
+  SVG_COLOR_WHITE,
+  SVG_COLOR_YELLOW,
+  SVG_ERROR,
+  SVG_INFO
+};
+
+export const setStore = (key: string, payload: string) => {
+  localStorage.setItem(key, payload);
+};
+
+export const getStore = (key: string) => {
+  const data = localStorage.getItem(key);
+  return key === 'access_token' ? `Bearer ${data}` : data;
+};
+
+export const clearStore = () => {
+  sessionStorage.clear();
+  localStorage.clear();
+};

@@ -1,0 +1,8 @@
+@import '../../../styles/resources.scss';
+
+.dividerRoot {
+  box-sizing: border-box;
+  background: #fcfcfc;
+  border: 1px solid $color-grey-2;
+  border-radius: 8px;
+}
