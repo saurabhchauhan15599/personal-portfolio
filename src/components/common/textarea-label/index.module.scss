@@ -1,0 +1,35 @@
+@import '../../../styles/resources.scss';
+
+.textAreaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  flex: 1;
+  .textAreaLabel {
+    font-family: $font-family-poppins;
+    font-weight: 500;
+    font-size: 14;
+    color: $color-slate-brown-1;
+    line-height: 16.8px;
+    &::after {
+      content: attr(data-value);
+      color: #ef4136;
+      font: inherit;
+    }
+  }
+  .textAreaHelperText {
+    font-family: $font-family-poppins;
+    font-size: 14;
+    font-weight: 400;
+    line-height: 17px;
+    color: $color-grey-6;
+    line-height: 16.8px;
+  }
+  .inputError {
+    border: 1px solid $color-red-6 !important;
+  }
+  .helperTextError {
+    color: #ef4136 !important;
+  }
+}

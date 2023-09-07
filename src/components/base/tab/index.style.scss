@@ -1,0 +1,16 @@
+@import '../../../styles/resources.scss';
+
+.MuiTab-root {
+  text-transform: initial !important;
+  font-family: $font-family-poppins !important;
+  font-size: 18 !important;
+  font-weight: 400 !important;
+  min-height: auto !important;
+  height: 42px;
+}
+.Mui-selected {
+  font-family: $font-family-poppins;
+  font-weight: 700 !important;
+  font-size: 18;
+  color: #2a2522 !important;
+}
