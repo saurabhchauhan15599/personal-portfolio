@@ -1,8 +1,6 @@
-import React, { useMemo, useState, ChangeEvent, useEffect } from 'react';
+import React, { ChangeEvent, useEffect, useId, useMemo, useState } from 'react';
 import Radio from '../radio';
-import uniqueId from 'lodash/uniqueId';
 import './index.style.scss';
-
 export interface IRadioGroupValue {
   label: string;
   value: string;
@@ -17,6 +15,7 @@ interface IRadioGroups {
 }
 
 function RadioGroup(props: IRadioGroups) {
+  const id = useId();
   const { options, defaultChecked = null } = props;
   const [radioState, setRadioState] = useState<IRadioGroupValue | null>(defaultChecked);
 
@@ -27,7 +26,7 @@ function RadioGroup(props: IRadioGroups) {
 
   const radioName = useMemo(() => {
     const { name } = props;
-    return name ? name : uniqueId();
+    return name ? name : id;
   }, []);
 
   const handleRadioChange = (item: IRadioGroupValue) => (event: ChangeEvent<HTMLInputElement>) => {

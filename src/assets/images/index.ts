@@ -15,7 +15,7 @@ const Images: any = {
   crossRed: CrossRed,
   crossGreen: CrossGreen,
   crossBlue: CrossBlue,
-  crossYellow: CrossYellow,
+  crossYellow: CrossYellow
 };
 
 export default Images;

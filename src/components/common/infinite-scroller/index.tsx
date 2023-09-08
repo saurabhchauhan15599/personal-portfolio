@@ -14,7 +14,15 @@ interface InfiniteScrollProps {
 }
 
 function InfiniteScroll(props: InfiniteScrollProps) {
-  const { rootRef, children, hasMore, onIntersect, currentIndex, hideEndText, retry = false } = props;
+  const {
+    rootRef,
+    children,
+    hasMore,
+    onIntersect,
+    currentIndex,
+    hideEndText,
+    retry = false
+  } = props;
   const targetRef = useRef<HTMLSpanElement>(null);
 
   const intersectionObserverCallback: IntersectionObserverCallback = useCallback(
@@ -24,7 +32,7 @@ function InfiniteScroll(props: InfiniteScrollProps) {
         onIntersect?.(currentIndex + 1);
       }
     },
-    [props.currentIndex, props.onIntersect, props.hasMore],
+    [props.currentIndex, props.onIntersect, props.hasMore]
   );
 
   useLayoutEffect(() => {
@@ -32,7 +40,7 @@ function InfiniteScroll(props: InfiniteScrollProps) {
 
     const options: IntersectionObserverInit = {
       root: rootRef ?? document,
-      rootMargin: '0px 0px 600px 0px',
+      rootMargin: '0px 0px 600px 0px'
     };
 
     const observer = new IntersectionObserver(intersectionObserverCallback, options);

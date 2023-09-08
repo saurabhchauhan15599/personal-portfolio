@@ -45,11 +45,11 @@ const Alert = (props: AlertProps) => {
 
 Alert.defaultProps = {
   severity: 'success',
-  icon: true,
+  icon: true
 };
 
 Alert.propTypes = {
-  severity: PropTypes.oneOf(['error', 'info', 'warning', 'success', 'none']),
+  severity: PropTypes.oneOf(['error', 'info', 'warning', 'success', 'none'])
 };
 
 export default Alert;

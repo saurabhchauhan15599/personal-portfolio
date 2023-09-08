@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IState {
- 
+  toggleTheme: object;
 }
 
-export type ActionType = 'setRegisterData' | 'setUserData' | 'setStepsData';
+export type ActionType = 'setTheme';
 
 export interface IAction {
   type: ActionType;
@@ -14,12 +14,12 @@ export const appReducer = (state: IState, action: IAction) => {
   const { payload } = action;
 
   switch (action.type) {
-    case 'setRegisterData': {
+    case 'setTheme': {
       return {
         ...state,
-        registerData: {
-          phone_number: payload.phone_number,
-        },
+        toggleTheme: {
+          theme: payload.theme
+        }
       };
     }
 

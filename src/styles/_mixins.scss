@@ -28,7 +28,12 @@
   letter-spacing: $letterSpacing;
 }
 
-@mixin displayFlex($flexDirection: row, $justifyContent: flex-start, $alignItems: flex-start, $gap: '8px') {
+@mixin displayFlex(
+  $flexDirection: row,
+  $justifyContent: flex-start,
+  $alignItems: flex-start,
+  $gap: '8px'
+) {
   display: flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;

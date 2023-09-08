@@ -21,7 +21,13 @@ export type typographyVariantType =
   | 'inherit';
 
 export type buttonVariantType = 'contained' | 'outlined' | 'outlined-secondary' | 'text';
-export type chipVariantType = 'filled' | 'outlined' | 'filled-blue' | 'filled-red' | 'filled-yellow' | 'filled-green';
+export type chipVariantType =
+  | 'filled'
+  | 'outlined'
+  | 'filled-blue'
+  | 'filled-red'
+  | 'filled-yellow'
+  | 'filled-green';
 export type chipPriorityType = 'High' | 'Low' | 'Medium' | 'Critical';
 export type severityType = 'error' | 'info' | 'success' | 'warning' | 'none';
 export type statusChipVariantType = 'filled-yellow' | 'filled-green' | 'filled-red';

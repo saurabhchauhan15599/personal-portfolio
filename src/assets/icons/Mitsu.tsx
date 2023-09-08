@@ -3,7 +3,13 @@ import { SVGProps } from '../../helpers/types';
 
 const MitsuLogo: React.FC<SVGProps> = () => {
   return (
-    <svg width="148" height="56" viewBox="0 0 148 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="148"
+      height="56"
+      viewBox="0 0 148 56"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_3663_2352)">
         <path
           d="M70.6152 46.9979C73.264 44.3052 76.1256 41.8645 79.1734 39.7053V51.4475C79.1734 52.7133 78.7531 53.7986 77.9119 54.6919C77.0926 55.5676 76.0876 55.9994 74.8975 55.9994C73.7234 55.9994 72.7184 55.5676 71.8773 54.6919C71.0361 53.7986 70.6158 52.7133 70.6158 51.4475V46.9979H70.6152Z"

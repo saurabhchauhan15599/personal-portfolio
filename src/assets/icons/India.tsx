@@ -14,7 +14,10 @@ const India: React.FC<SVGProps> = () => {
       <rect y="0.5" width="20" height="16" fill="url(#pattern0)" />
       <defs>
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlinkHref="#image0_3934_1686" transform="matrix(0.00166667 0 0 0.00208333 -0.0333333 0)" />
+          <use
+            xlinkHref="#image0_3934_1686"
+            transform="matrix(0.00166667 0 0 0.00208333 -0.0333333 0)"
+          />
         </pattern>
         <image
           id="image0_3934_1686"

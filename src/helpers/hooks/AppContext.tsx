@@ -11,14 +11,12 @@ export const AppContext = createContext<any>({});
 
 const AppContextProvider: React.FC<IAppContextProps> = (props) => {
   const initialState = {
-    registerData: {
-      phone_number: ''
-    },
-    userData: {},
-    stepsData: {}
+    toggleTheme: {
+      theme: 'dark'
+    }
   };
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const [appState, appDispatch] = useReducer(appReducer, initialState);
 
   return (

@@ -8,7 +8,7 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
-  useState,
+  useState
 } from 'react';
 import './index.style.scss';
 
@@ -48,7 +48,7 @@ const Switch = forwardRef((props: SwitchProps, ref) => {
 });
 
 Switch.propTypes = {
-  checked: PropTypes.bool,
+  checked: PropTypes.bool
 };
 
 Switch.displayName = 'Switch';

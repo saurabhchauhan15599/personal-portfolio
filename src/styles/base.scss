@@ -64,3 +64,32 @@ a {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+[data-theme='dark'] {
+  --text-primary: #ffffff;
+  --text-secondary: grey;
+  --accent: darkred;
+  --boxShadow-color1: rgb(168, 161, 161);
+  --boxShadow-color2: rgb(168, 161, 161);
+  --form-fields-background-color: lightgray;
+  --table-header-color: #302d2d;
+  --table-background: rgb(110, 105, 105);
+  --table-border: rgb(182, 167, 167);
+  --data-not-found-heading: #ffffff;
+  --background: url('https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg');
+}
+
+[data-theme='light'] {
+  --background: url('https://tailwindcss.com/_next/static/media/hero@75.b2469a49.jpg');
+  --text-primary: #363537;
+  --text-secondary: grey;
+  --accent: darkred;
+  --boxShadow-color1: #1018281a;
+  --boxShadow-color2: #1018280f;
+
+  --table-header-color: #71b8f3;
+  --table-background: #f2f8fd;
+  --table-border: black;
+  --form-fields-background-color: white;
+  --data-not-found-heading: #2196f3;
+}
