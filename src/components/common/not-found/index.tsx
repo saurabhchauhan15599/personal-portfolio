@@ -11,7 +11,8 @@ export const NotFound = () => {
 
   const onErrorImage = ({ currentTarget }: SyntheticEvent<HTMLImageElement, Event>): void => {
     currentTarget.onerror = null;
-    currentTarget.src = 'https://t4.ftcdn.net/jpg/01/98/86/63/360_F_198866399_vQambmqMEK9975X1Yg7686t4nFpSaubL.jpg';
+    currentTarget.src =
+      'https://t4.ftcdn.net/jpg/01/98/86/63/360_F_198866399_vQambmqMEK9975X1Yg7686t4nFpSaubL.jpg';
   };
 
   return (

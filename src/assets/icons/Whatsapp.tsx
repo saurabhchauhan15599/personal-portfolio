@@ -17,7 +17,14 @@ const WhatsAppImg: React.FC<SVGProps> = () => {
         fill="white"
       />
       <defs>
-        <linearGradient id="paint0_linear_4616_2995" x1="12" y1="24" x2="12" y2="0" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id="paint0_linear_4616_2995"
+          x1="12"
+          y1="24"
+          x2="12"
+          y2="0"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#21B04C" />
           <stop offset="1" stopColor="#128C49" />
         </linearGradient>

@@ -17,7 +17,7 @@ interface SelectLabelProps extends Props {
 const SelectLabel = forwardRef(function SelectLabel<
   Option,
   IsMulti extends boolean = false,
-  Group extends GroupBase<Option> = GroupBase<Option>,
+  Group extends GroupBase<Option> = GroupBase<Option>
 >(props: SelectLabelProps, ref: Ref<SelectInstance<Option, IsMulti, Group>>) {
   const {
     label,
@@ -50,7 +50,9 @@ const SelectLabel = forwardRef(function SelectLabel<
         value={value}
         styles={styles}
       />
-      {helperText && <span className={`select-field-helperText ${helperTextClass}`}>{helperText}</span>}
+      {helperText && (
+        <span className={`select-field-helperText ${helperTextClass}`}>{helperText}</span>
+      )}
     </label>
   );
 });

@@ -13,7 +13,9 @@ const RefTextareaLabel = (props: TeaxtAreaLabelProps, ref: Ref<HTMLTextAreaEleme
   const { label, helperText, error, required, className, rootClassName, ...otherProps } = props;
 
   const inputClass = error ? `${css.inputError} ${className}` : className;
-  const helperTextClass = error ? `${css.textAreaHelperText} ${css.helperTextError}` : `${css.textAreaHelperText}`;
+  const helperTextClass = error
+    ? `${css.textAreaHelperText} ${css.helperTextError}`
+    : `${css.textAreaHelperText}`;
   const showAsterisk = required ? ' *' : undefined;
 
   return (

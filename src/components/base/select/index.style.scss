@@ -137,7 +137,8 @@
   background: var(--supportive-colors-white, #fff);
 
   /* Shadow_Yellow */
-  box-shadow: 0px 1.6603538990020752px 3.569760799407959px 0px rgba(197, 177, 1, 0.02),
+  box-shadow:
+    0px 1.6603538990020752px 3.569760799407959px 0px rgba(197, 177, 1, 0.02),
     0px 3.9900612831115723px 8.578631401062012px 0px rgba(197, 177, 1, 0.03),
     0px 7.5129313468933105px 16.152801513671875px 0px rgba(197, 177, 1, 0.04),
     0px 13.401785850524902px 28.813838958740234px 0px rgba(197, 177, 1, 0.04),
@@ -186,7 +187,11 @@
   height: 100%;
   width: 100%;
   opacity: 0.85;
-  background: var(--supportive-colors-gradient, linear-gradient(181deg, #fffef0 0%, #e1f9fe 100%), #fff);
+  background: var(
+    --supportive-colors-gradient,
+    linear-gradient(181deg, #fffef0 0%, #e1f9fe 100%),
+    #fff
+  );
   z-index: -1;
 }
 
@@ -195,4 +200,3 @@
     padding: 20px;
   }
 }
-

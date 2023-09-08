@@ -1,11 +1,8 @@
 import { Alert, AlertProps } from './alert';
 import Button, { ButtonProps } from './button';
-import ButtonGroup from './button-group';
 import { Checkbox, CheckboxLabel, CheckboxLabelProps, CheckboxProps } from './checkbox';
 import Chip from './chip';
 import Divider from './divider';
-import IconNode, { IconNodeProps } from './icon-node';
-import Image, { ImageProps } from './image';
 import { Input, InputProps, TextArea, TextAreaProps } from './input';
 import Loader, { Spinner } from './loader';
 import Modal, { ModalProps } from './modal';
@@ -19,13 +16,10 @@ import Typography from './typography';
 export {
   Alert,
   Button,
-  ButtonGroup,
   Checkbox,
   CheckboxLabel,
   Chip,
   Divider,
-  IconNode,
-  Image,
   Input,
   Loader,
   Modal,
@@ -40,15 +34,12 @@ export {
   Typography
 };
 
-  export type {
-    AlertProps,
-    ButtonProps,
-    CheckboxLabelProps,
-    CheckboxProps,
-    IconNodeProps,
-    ImageProps,
-    InputProps,
-    ModalProps,
-    TextAreaProps
-  };
-
+export type {
+  AlertProps,
+  ButtonProps,
+  CheckboxLabelProps,
+  CheckboxProps,
+  InputProps,
+  ModalProps,
+  TextAreaProps
+};

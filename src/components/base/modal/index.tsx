@@ -8,4 +8,3 @@ const Modal = (props: MuiModalProps) => {
 
 export default Modal;
 export type { MuiModalProps as ModalProps };
-

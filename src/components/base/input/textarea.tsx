@@ -7,7 +7,7 @@ import {
   useImperativeHandle,
   FocusEvent,
   TextareaHTMLAttributes,
-  ChangeEvent,
+  ChangeEvent
 } from 'react';
 import PropTypes from 'prop-types';
 import './index.style.scss';
@@ -55,7 +55,10 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>((props, ref) => 
     const { onChange, autoExpand, resizable } = props;
     if (autoExpand && !resizable) {
       textAreaRef.current?.setAttribute('style', `height: 0px; overflow-y:hidden;`);
-      textAreaRef.current?.setAttribute('style', `height: ${event.currentTarget.scrollHeight}px; overflow-y:hidden;`);
+      textAreaRef.current?.setAttribute(
+        'style',
+        `height: ${event.currentTarget.scrollHeight}px; overflow-y:hidden;`
+      );
     }
 
     onChange?.(event);
@@ -87,7 +90,7 @@ TextArea.propTypes = {
   inputClassName: PropTypes.string,
   disableFocus: PropTypes.bool,
   resizable: PropTypes.bool,
-  autoExpand: PropTypes.bool,
+  autoExpand: PropTypes.bool
 };
 
 TextArea.defaultProps = {
@@ -96,7 +99,7 @@ TextArea.defaultProps = {
   disabled: false,
   rows: 2,
   resizable: false,
-  autoExpand: true,
+  autoExpand: true
 };
 
 export default memo(TextArea);

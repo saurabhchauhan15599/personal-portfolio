@@ -12,8 +12,17 @@ export interface TextFieldProps extends InputProps {
 }
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function (props, ref) {
-  const { label, helperText, error, required, labelClassName, rootClassName, title, inputClassName, ...otherProps } =
-    props;
+  const {
+    label,
+    helperText,
+    error,
+    required,
+    labelClassName,
+    rootClassName,
+    title,
+    inputClassName,
+    ...otherProps
+  } = props;
   const inputErrorClass = error ? 'input-error' : undefined;
   const helperTextClass = error ? 'helper-text-error' : undefined;
   const showAsterisk = required ? ' *' : undefined;

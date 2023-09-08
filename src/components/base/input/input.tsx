@@ -8,7 +8,7 @@ import {
   memo,
   useImperativeHandle,
   useRef,
-  useState,
+  useState
 } from 'react';
 import './index.style.scss';
 
@@ -20,8 +20,17 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef((props: InputProps, ref) => {
-  const { disabled, disableFocus, className, inputClassName, startIcon, endIcon, autoFocus, readOnly, ...otherProps } =
-    props;
+  const {
+    disabled,
+    disableFocus,
+    className,
+    inputClassName,
+    startIcon,
+    endIcon,
+    autoFocus,
+    readOnly,
+    ...otherProps
+  } = props;
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputFocus, setFocus] = useState(!!autoFocus && !disableFocus);
 
@@ -63,14 +72,14 @@ const Input = forwardRef((props: InputProps, ref) => {
 
 Input.propTypes = {
   inputClassName: PropTypes.string,
-  disableFocus: PropTypes.bool,
+  disableFocus: PropTypes.bool
 };
 
 Input.defaultProps = {
   placeholder: 'Jot something down',
   autoFocus: false,
   disabled: false,
-  maxLength: 255,
+  maxLength: 255
 };
 
 Input.displayName = 'Input';
