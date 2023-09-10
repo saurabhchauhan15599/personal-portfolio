@@ -1,23 +1,21 @@
 @import '../../../styles/resources.scss';
 
 .header {
-  position: sticky;
-  top: 0;
+  width: 100%;
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   .title {
-    width: 20%;
     justify-self: flex-start;
     .text {
-      font-family: $font-family-nabla, cursive;
+      font-family: $font-family-poppins;
+      color: var(--text-primary);
     }
   }
 
   .links {
-    width: 25%;
     justify-self: flex-end;
     display: flex;
     align-items: center;
@@ -43,8 +41,9 @@
 
     .divider {
       height: 30px;
-      width: 5px;
-      border-right: 5px solid $blue-grey-700;
+      width: 1px;
+      border-right: 2px solid $blue-grey-700;
+      margin: 0 1rem;
     }
   }
 }

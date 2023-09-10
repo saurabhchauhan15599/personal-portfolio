@@ -73,3 +73,8 @@ export const secondaryNavigation = [
   { id: 1, link: 'https://www.linkedin.com/feed/', component: GithubOutlined },
   { id: 1, link: 'https://www.linkedin.com/feed/', component: Linkedin }
 ];
+
+export const DARK_MODE_MAP = {
+  dark: 'dark',
+  light: 'light'
+};

@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from 'react-router-dom';
-import { primaryNavigation, secondaryNavigation } from '../../../helpers/constant';
+import AlertSuccess from '../../../assets/icons/AlertSuccess';
+import { DARK_MODE_MAP, primaryNavigation, secondaryNavigation } from '../../../helpers/constant';
 import Divider from '../../base/divider';
 import Typography from '../../base/typography';
+import ThemeToggler from '../switch';
 import css from './index.module.scss';
 
 interface IHeader {
@@ -11,12 +13,12 @@ interface IHeader {
 }
 
 const Header = (props: IHeader) => {
-  const { theme } = props;
+  const { theme, setTheme = () => {} } = props;
   return (
     <div className={css.header}>
       <section className={css.title}>
-        <Typography variant="h1" className={css.text}>
-          Saurabh Chauhan
+        <Typography variant="h2" className={css.text}>
+          <AlertSuccess /> Saurabh Chauhan
         </Typography>
       </section>
       <section className={css.links}>
@@ -30,11 +32,23 @@ const Header = (props: IHeader) => {
           })}
         </div>
         <Divider className={css.divider} />
+        <div>
+          <ThemeToggler
+            checked={theme === DARK_MODE_MAP.dark}
+            onChange={() =>
+              setTheme(theme === DARK_MODE_MAP.light ? DARK_MODE_MAP.dark : DARK_MODE_MAP.light)
+            }
+          />
+        </div>
+        <Divider className={css.divider} />
         <div className={css.secondary}>
           {secondaryNavigation.map((val, index) => {
             return (
               <a href={val.link} target="_blank" rel="noopener noreferrer" key={index}>
-                <val.component className={css.logo} color={!theme ? '#fff' : '#000000'} />
+                <val.component
+                  className={css.logo}
+                  color={theme === DARK_MODE_MAP.dark ? '#fff' : '#000000'}
+                />
               </a>
             );
           })}
