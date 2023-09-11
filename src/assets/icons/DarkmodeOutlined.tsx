@@ -17,5 +17,5 @@ const DarkmodeOutlined: React.FC<SVGProps> = () => {
     </svg>
   );
 };
-  
+
 export default DarkmodeOutlined;
