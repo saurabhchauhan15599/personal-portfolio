@@ -1,6 +1,4 @@
-import Switch from '@mui/joy/Switch';
-import DarkMode from '../../../assets/icons/Darkmode';
-import DarkmodeOutlined from '../../../assets/icons/DarkmodeOutlined';
+import './index.scss';
 
 interface ISwitch {
   checked: boolean;
@@ -11,19 +9,10 @@ const ThemeToggler = (props: ISwitch) => {
   const { checked, onChange } = props;
 
   return (
-    <Switch
-      checked={checked}
-      onChange={onChange}
-      slotProps={{
-        input: { 'aria-label': 'Dark mode' },
-        thumb: {
-          children: checked ? <DarkMode /> : <DarkmodeOutlined />
-        }
-      }}
-      sx={{
-        '--Switch-thumbSize': '28px'
-      }}
-    />
+    <div className="toggle">
+      <input type="checkbox" onChange={onChange} checked={checked} />
+      <label></label>
+    </div>
   );
 };
 
