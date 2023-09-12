@@ -1,0 +1,21 @@
+@import '../../../styles/resources.scss';
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    display: flex;
+    gap: 8px;
+    font-size: 90px;
+    font-family: $font-family-roobert;
+    line-height: 94.5px;
+    color: var(--text-secondary);
+    animation-timeline: view();
+    animation-range: 0 300px;
+
+    .secondarylabel {
+      color: var(--text-primary);
+    }
+  }
+}

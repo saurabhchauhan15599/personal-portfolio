@@ -6,6 +6,7 @@ import Header from './components/common/header';
 import { Meteors } from './components/common/meteor-effect';
 import AppContextProvider from './helpers/hooks/AppContext';
 import ScrollToTopOnNavigate from './helpers/hooks/useScrollTop';
+import RoutesComp from './router/routes';
 import './styles/App.scss';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <AppContextProvider>
             <Meteors number={10} />
             <Header theme={theme} setTheme={setTheme} />
+            <RoutesComp />
             <ScrollToTopOnNavigate />
             <ToastContainer
               autoClose={4000}
