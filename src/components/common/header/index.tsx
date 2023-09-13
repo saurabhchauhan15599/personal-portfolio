@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AlertSuccess from '../../../assets/icons/AlertSuccess';
 import { DARK_MODE_MAP, primaryNavigation, secondaryNavigation } from '../../../helpers/constant';
+import { AppContext } from '../../../helpers/hooks/AppContext';
 import Divider from '../../base/divider';
 import Typography from '../../base/typography';
 import ThemeToggler from '../switch';
@@ -13,6 +15,7 @@ interface IHeader {
 }
 
 const Header = (props: IHeader) => {
+  const { appDispatch } = useContext(AppContext);
   const { theme, setTheme = () => {} } = props;
   return (
     <div className={css.header}>
@@ -35,9 +38,15 @@ const Header = (props: IHeader) => {
         <div>
           <ThemeToggler
             checked={theme === DARK_MODE_MAP.dark}
-            onChange={() =>
-              setTheme(theme === DARK_MODE_MAP.light ? DARK_MODE_MAP.dark : DARK_MODE_MAP.light)
-            }
+            onChange={() => {
+              setTheme(theme === DARK_MODE_MAP.light ? DARK_MODE_MAP.dark : DARK_MODE_MAP.light);
+              appDispatch({
+                type: 'setTheme',
+                payload: {
+                  theme: theme === DARK_MODE_MAP.light ? DARK_MODE_MAP.dark : DARK_MODE_MAP.light
+                }
+              });
+            }}
           />
         </div>
         <Divider className={css.divider} />

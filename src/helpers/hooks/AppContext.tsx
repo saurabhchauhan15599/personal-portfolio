@@ -12,7 +12,7 @@ export const AppContext = createContext<any>({});
 const AppContextProvider: React.FC<IAppContextProps> = (props) => {
   const initialState = {
     toggleTheme: {
-      theme: 'dark'
+      theme: 'light'
     }
   };
 
