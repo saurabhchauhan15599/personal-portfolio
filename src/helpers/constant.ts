@@ -1,5 +1,17 @@
+import AxiosIcon from '../assets/icons/AxiosIcon';
+import CSSIcon from '../assets/icons/CSSIcon';
 import GithubOutlined from '../assets/icons/GithubOutlined';
+import HTMLIcon from '../assets/icons/HtmlIcon';
+import JSIcon from '../assets/icons/JsIcon';
 import Linkedin from '../assets/icons/LinkedIn';
+import MUIIcon from '../assets/icons/MuiIcon';
+import NextJSIcon from '../assets/icons/NextIcon';
+import PythonIcon from '../assets/icons/PythonIcon';
+import ReactIcon from '../assets/icons/ReactIcon';
+import SASSIcon from '../assets/icons/SASSIcon';
+import TailwindIcon from '../assets/icons/TailwindIcon';
+import TSIcon from '../assets/icons/TsIcon';
+import ViteIcon from '../assets/icons/ViteIcon';
 
 export const alertIconMapping: Record<string, string> = {
   error: 'alertError',
@@ -78,3 +90,18 @@ export const DARK_MODE_MAP = {
   dark: 'dark',
   light: 'light'
 };
+
+export const skillsArray = [
+  { id: 1, label: 'React', element: ReactIcon },
+  { id: 2, label: 'Next', element: NextJSIcon },
+  { id: 3, label: 'Vite', element: ViteIcon },
+  { id: 4, label: 'Typescript', element: TSIcon },
+  { id: 5, label: 'Javascript', element: JSIcon },
+  { id: 6, label: 'HTML5', element: HTMLIcon },
+  { id: 7, label: 'CSS3', element: CSSIcon },
+  { id: 8, label: 'SASS', element: SASSIcon },
+  { id: 9, label: 'Material UI', element: MUIIcon },
+  { id: 10, label: 'Tailwind CSS', element: TailwindIcon },
+  { id: 11, label: 'Axios', element: AxiosIcon },
+  { id: 11, label: 'Python', element: PythonIcon }
+];

@@ -7,7 +7,7 @@ import CrossGreen from '../icons/CrossGreen';
 import CrossRed from '../icons/CrossRed';
 import CrossYellow from '../icons/CrossYellow';
 
-const Images: any = {
+const Images = {
   alertError: AlertError,
   alertSuccess: AlertSuccess,
   alertInfo: AlertInfo,
