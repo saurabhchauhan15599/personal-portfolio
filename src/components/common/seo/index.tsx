@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import { Helmet, HelmetProps } from 'react-helmet-async';
 
 export interface SeoProps extends HelmetProps {
