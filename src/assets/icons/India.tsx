@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const India: React.FC<SVGProps> = () => {
+const India: React.FC<SVGProps> = ({ ...props }) => {
   return (
     <svg
       width="20"
@@ -10,6 +10,7 @@ const India: React.FC<SVGProps> = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      { ...props }
     >
       <rect y="0.5" width="20" height="16" fill="url(#pattern0)" />
       <defs>

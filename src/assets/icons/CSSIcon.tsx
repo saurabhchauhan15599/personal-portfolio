@@ -1,11 +1,10 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const CSSIcon: React.FC<SVGProps> = () => {
+const CSSIcon: React.FC<SVGProps> = ({ color = '#000000', ...props }) => {
   return (
     <svg
-    
-      fill="#000000"
+      fill={color}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -14,6 +13,7 @@ const CSSIcon: React.FC<SVGProps> = () => {
       viewBox="0 0 512 512"
       enable-background="new 0 0 512 512"
       xmlSpace="preserve"
+      {...props}
     >
       <title>CSS3</title>
       <g id="c133de6af664cd4f011a55de6b001b19">

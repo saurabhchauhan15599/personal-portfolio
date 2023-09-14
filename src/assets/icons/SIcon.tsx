@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const SSVGIcon: React.FC<SVGProps> = () => {
+const SSVGIcon: React.FC<SVGProps> = ({ ...props }) => {
   return (
     <svg
       width="30px"
@@ -10,6 +10,7 @@ const SSVGIcon: React.FC<SVGProps> = () => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <defs></defs>
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

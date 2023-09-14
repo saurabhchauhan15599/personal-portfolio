@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const TSIcon: React.FC<SVGProps> = () => {
+const TSIcon: React.FC<SVGProps> = ({ ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +10,7 @@ const TSIcon: React.FC<SVGProps> = () => {
       viewBox="0 0 512 512"
       height="100"
       width="100"
+      {...props}
     >
       <title>Typescript</title>
       <rect width="512" height="512" rx="15%" fill="#3178c6" />
