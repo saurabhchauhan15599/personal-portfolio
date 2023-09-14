@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const Linkedin: React.FC<SVGProps> = () => {
+const Linkedin: React.FC<SVGProps> = ({ ...props }) => {
   return (
     <svg
       width="40px"
@@ -9,6 +9,7 @@ const Linkedin: React.FC<SVGProps> = () => {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      { ...props }
     >
       <circle cx="24" cy="24" r="20" fill="#0077B5" />
       <path

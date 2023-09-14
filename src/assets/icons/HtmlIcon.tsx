@@ -1,10 +1,10 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const HTMLIcon: React.FC<SVGProps> = () => {
+const HTMLIcon: React.FC<SVGProps> = ({ color = '#000000', ...props }) => {
   return (
     <svg
-      fill="#000000"
+      fill={color}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,9 +13,10 @@ const HTMLIcon: React.FC<SVGProps> = () => {
       viewBox="0 0 512 512"
       enable-background="new 0 0 512 512"
       xmlSpace="preserve"
+      {...props}
     >
       <title>HTML5</title>
-      <g id="c133de6af664cd4f011a55de6b0011b2">
+      <g>
         <path
           display="inline"
           d="M30.713,0.501L71.717,460.42l184.006,51.078l184.515-51.15L481.287,0.501H30.713z M395.754,109.646

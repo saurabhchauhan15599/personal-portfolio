@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVGProps } from '../../helpers/types';
 
-const ReactIcon: React.FC<SVGProps> = () => {
+const ReactIcon: React.FC<SVGProps> = ({ ...props }) => {
   return (
     <svg
       width="100px"
@@ -9,6 +9,7 @@ const ReactIcon: React.FC<SVGProps> = () => {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>React.js</title>
       <path
