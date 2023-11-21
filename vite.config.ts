@@ -12,14 +12,5 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    headers: {
-      'X-Frame-Options': 'none',
-      'X-Content-Type-Options': 'nosniff',
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Embedder-Policy': 'unsafe-none',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': '*',
-      'Access-Control-Allow-Headers': '*'
-    }
   }
 });
