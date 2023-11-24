@@ -7,7 +7,6 @@ import { Meteors } from './components/common/meteor-effect';
 import AppContextProvider from './helpers/hooks/AppContext';
 import ScrollToTopOnNavigate from './helpers/hooks/useScrollTop';
 import RoutesComp from './router/routes';
-import './styles/App.scss';
 
 function App() {
   const [theme, setTheme] = useState('light');

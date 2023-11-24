@@ -1,10 +1,7 @@
 @import './typography';
 @import './variables';
 @import './mixins';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./App.scss";
 
 *,
 *:before,
