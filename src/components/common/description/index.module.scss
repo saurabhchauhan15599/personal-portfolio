@@ -1,13 +1,27 @@
 @import '../../../styles/resources.scss';
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
 .container {
-  margin: 20rem 2rem;
-  width: 100%;
+  margin: 20rem 0;
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   white-space: none;
   flex-wrap: wrap;
-  animation: fadeIn 2s ease-out; 
+  transform-origin: 0 50%;
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
 
   .label {
     font-size: 30px;
@@ -18,17 +32,5 @@
     .secondarylabel {
       color: var(--text-primary);
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(50px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(0px, 0px);
   }
 }
