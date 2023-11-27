@@ -11,7 +11,7 @@ const HTMLIcon: React.FC<SVGProps> = ({ color = '#000000', ...props }) => {
       width="100px"
       height="100px"
       viewBox="0 0 512 512"
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       xmlSpace="preserve"
       {...props}
     >

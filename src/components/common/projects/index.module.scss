@@ -1,0 +1,50 @@
+@import 'src/styles/resources.scss';
+
+.container {
+  width: auto;
+  padding: 20rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .title {
+    align-self: flex-start;
+    .label {
+      display: flex;
+      gap: 8px;
+      font-size: 90px;
+      font-family: $font-family-roobert;
+      line-height: 94.5px;
+      color: var(--text-secondary);
+      animation-timeline: view();
+      animation-range: 0 300px;
+    }
+  }
+
+  .grid {
+    width: auto;
+    display: grid;
+    grid-row-gap: 4rem;
+    grid-column-gap: 5rem;
+    grid-template-columns: repeat(3, fit-content(300px));
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+
+      &:hover {
+        box-shadow: $box-shadow-2;
+      }
+      .logo {
+        height: 80px;
+        border-radius: 8px;
+      }
+    }
+  }
+}

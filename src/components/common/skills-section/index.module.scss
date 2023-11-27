@@ -1,8 +1,13 @@
+@import 'src/styles/resources.scss';
+
 .skills {
+  margin: 10rem 2rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 10rem 0;
+  gap: 2rem;
 
   .container {
     width: auto;
@@ -10,5 +15,18 @@
     grid-row-gap: 4rem;
     grid-column-gap: 5rem;
     grid-template-columns: repeat(6, fit-content(300px));
+  }
+  .title {
+    align-self: flex-start;
+    .label {
+      display: flex;
+      gap: 8px;
+      font-size: 90px;
+      font-family: $font-family-roobert;
+      line-height: 94.5px;
+      color: var(--text-secondary);
+      animation-timeline: view();
+      animation-range: 0 300px;
+    }
   }
 }

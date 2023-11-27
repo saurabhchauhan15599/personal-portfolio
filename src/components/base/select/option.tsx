@@ -1,4 +1,4 @@
-import { YellowRightTickIcon } from '@saurabh-chauhan/sc-components-library';
+import { GreenTickIcon } from '@saurabh-chauhan/sc-components-library';
 import { MouseEvent, useCallback, useMemo } from 'react';
 import { GroupBase, OptionProps, components } from 'react-select';
 import CheckboxLabel from '../checkbox/checkbox-label';
@@ -33,7 +33,7 @@ function Option<
       ) : (
         label
       )}
-      {isMulti ? null : isSelected ? <YellowRightTickIcon /> : null}
+      {isMulti ? null : isSelected ? <GreenTickIcon /> : null}
     </components.Option>
   );
 }

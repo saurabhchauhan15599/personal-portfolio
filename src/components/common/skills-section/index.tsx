@@ -10,7 +10,10 @@ const Skills = () => {
   const { toggleTheme } = appState;
   const { theme } = toggleTheme;
   return (
-    <section className={css.skills}>
+    <section className={css.skills} id="skills-section">
+      <section className={css.title}>
+        <Typography className={css.label}>Skills,</Typography>
+      </section>
       <div className={css.container}>
         {skillsArray.map((val, index) => {
           return (

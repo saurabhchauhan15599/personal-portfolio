@@ -22,8 +22,8 @@ const ViteIcon: React.FC<SVGProps> = ({ ...props }) => {
           y2="78.4107719%"
           id="linearGradient-1"
         >
-          <stop stop-color="#41D1FF" offset="0%"></stop>
-          <stop stop-color="#BD34FE" offset="100%"></stop>
+          <stop stopColor="#41D1FF" offset="0%"></stop>
+          <stop stopColor="#BD34FE" offset="100%"></stop>
         </linearGradient>
         <linearGradient
           x1="43.3760053%"
@@ -32,9 +32,9 @@ const ViteIcon: React.FC<SVGProps> = ({ ...props }) => {
           y2="89.0299051%"
           id="linearGradient-2"
         >
-          <stop stop-color="#FFEA83" offset="0%"></stop>
-          <stop stop-color="#FFDD35" offset="8.33333%"></stop>
-          <stop stop-color="#FFA800" offset="100%"></stop>
+          <stop stopColor="#FFEA83" offset="0%"></stop>
+          <stop stopColor="#FFDD35" offset="8.33333%"></stop>
+          <stop stopColor="#FFA800" offset="100%"></stop>
         </linearGradient>
       </defs>
       <g>

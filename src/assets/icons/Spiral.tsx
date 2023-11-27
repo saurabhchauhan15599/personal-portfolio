@@ -15,7 +15,7 @@ const SpiralIcon: React.FC<SVGProps> = ({ color = '#000000', ...props }) => {
       <title> spiral [#32]</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-300.000000, -8039.000000)"
