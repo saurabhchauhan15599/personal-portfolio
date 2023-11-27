@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import ChevronDown from '../../../assets/icons/ChevronDown';
 import { AppContext } from '../../../helpers/hooks/AppContext';
-import Typography from '../../base/typography';
 import css from './index.module.scss';
+import { Typography } from '@saurabh-chauhan/sc-components-library';
 
 const AboutMe: React.FC = () => {
   const { appState } = useContext(AppContext);
@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   const { theme } = toggleTheme;
 
   return (
-    <div className="animate-fade-out-down w-full flex justify-end pt-20 pr-4 [animation-timeline:scroll()] [animation-range:0px_300px]"> 
+    <div className="w-auto flex justify-end pt-20 pr-4">
       <section className={css.subcontainer}>
         <Typography className={css.label}>Hello, </Typography>
         <Typography className={css.label}>

@@ -1,3 +1,4 @@
+import { FunctionComponent, SVGProps } from 'react';
 import AlertError from '../icons/AlertError';
 import AlertInfo from '../icons/AlertInfo';
 import AlertSuccess from '../icons/AlertSuccess';
@@ -7,7 +8,7 @@ import CrossGreen from '../icons/CrossGreen';
 import CrossRed from '../icons/CrossRed';
 import CrossYellow from '../icons/CrossYellow';
 
-const Images = {
+const Images: Record<string, FunctionComponent<SVGProps<SVGSVGElement>>> = {
   alertError: AlertError,
   alertSuccess: AlertSuccess,
   alertInfo: AlertInfo,

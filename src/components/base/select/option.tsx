@@ -1,6 +1,6 @@
 import { MouseEvent, useCallback, useMemo } from 'react';
 import { GroupBase, OptionProps, components } from 'react-select';
-import YellowRightTick from '../../../assets/icons/YellowRightTick';
+import YellowRightTick from '../../../assets/icons/CrossYellow';
 import CheckboxLabel from '../checkbox/checkbox-label';
 
 function Option<
