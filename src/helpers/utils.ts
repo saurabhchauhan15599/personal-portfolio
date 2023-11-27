@@ -43,4 +43,3 @@ export const clearStore = () => {
   sessionStorage.clear();
   localStorage.clear();
 };
-

@@ -6,5 +6,4 @@ import TextAreaLabel, { TeaxtAreaLabelProps } from './textarea-label';
 
 export { DeletePrompt, SelectLabel, Seo, TextAreaLabel, TextField };
 
-  export type { SelectLabelProps, SeoProps, TeaxtAreaLabelProps, TextFieldProps };
-
+export type { SelectLabelProps, SeoProps, TeaxtAreaLabelProps, TextFieldProps };

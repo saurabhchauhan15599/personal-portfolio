@@ -37,6 +37,17 @@ input::-ms-clear {
   display: none;
 }
 
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
 @supports (-ms-ime-align: auto) {
   body {
     -webkit-font-smoothing: subpixel-antialiased;

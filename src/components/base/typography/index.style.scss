@@ -44,8 +44,6 @@
 
 .typography--variant-h5 {
   font-family: $font-family-poppins;
-  //font-family: $font-family-poppins;
-  //font-family: 'Avenir';
   font-size: 28px;
   font-weight: 400;
   color: $grey-color-500;
@@ -61,12 +59,11 @@
 }
 
 .typography--variant-subheading1 {
-  //used
   line-height: 28px;
+  font-size: 12px;
   font-family: $font-family-poppins;
   font-weight: $font-weight-400;
   color: #515561;
-  font-size: $font-size-subheader;
   line-height: 140%;
 }
 
