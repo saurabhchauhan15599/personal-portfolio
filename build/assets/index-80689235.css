@@ -6906,21 +6906,21 @@ input:checked + .slider:before {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 }
-._imageCarousel_c5v2y_1 {
+._imageCarousel_w7ier_1 {
   position: relative;
   width: 100%;
   height: 300px;
   overflow: hidden;
 }
-._imageCarousel_c5v2y_1 ._carouselImage_c5v2y_7 {
+._imageCarousel_w7ier_1 ._carouselImage_w7ier_7 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 100%;
   height: auto;
   transition: transform 0.5s ease-in-out;
 }
-._imageCarousel_c5v2y_1 ._carouselButton_c5v2y_15 {
+._imageCarousel_w7ier_1 ._carouselButton_w7ier_15 {
   position: absolute;
   bottom: 50%;
   right: 0;

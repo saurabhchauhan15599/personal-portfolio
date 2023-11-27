@@ -10654,9 +10654,9 @@ const o3 = ({ ...e }) =>
           id: 'c133de6af664cd4f011a55de6b001b19',
           children: _.jsx('path', {
             display: 'inline',
-            d: `M483.111,0.501l-42.59,461.314l-184.524,49.684L71.47,461.815L28.889,0.501H483.111z M397.29,94.302
-		H255.831H111.866l6.885,55.708h137.08h7.7l-7.7,3.205l-132.07,55.006l4.38,54.453l127.69,0.414l68.438,0.217l-4.381,72.606
-		l-64.058,18.035v-0.057l-0.525,0.146l-61.864-15.617l-3.754-45.07h-0.205H132.1h-0.202l7.511,87.007l116.423,34.429v-0.062
+            d: `M483.111,0.501l-42.59,461.314l-184.524,49.684L71.47,461.815L28.889,0.501H483.111z M397.29,94.302\r
+		H255.831H111.866l6.885,55.708h137.08h7.7l-7.7,3.205l-132.07,55.006l4.38,54.453l127.69,0.414l68.438,0.217l-4.381,72.606\r
+		l-64.058,18.035v-0.057l-0.525,0.146l-61.864-15.617l-3.754-45.07h-0.205H132.1h-0.202l7.511,87.007l116.423,34.429v-0.062\r
 		l0.21,0.062l115.799-33.802l15.021-172.761h-131.03h-0.323l0.323-0.14l135.83-58.071L397.29,94.302z`
           })
         })
@@ -10692,9 +10692,9 @@ const o3 = ({ ...e }) =>
         _.jsx('g', {
           children: _.jsx('path', {
             display: 'inline',
-            d: `M30.713,0.501L71.717,460.42l184.006,51.078l184.515-51.15L481.287,0.501H30.713z M395.754,109.646
-		l-2.567,28.596l-1.128,12.681h-0.187H256h-0.197h-79.599l5.155,57.761h74.444H256h115.723h15.201l-1.377,15.146l-13.255,148.506
-		l-0.849,9.523L256,413.854v0.012l-0.259,0.072l-115.547-32.078l-7.903-88.566h26.098h30.526l4.016,44.986l62.82,16.965l0.052-0.014
+            d: `M30.713,0.501L71.717,460.42l184.006,51.078l184.515-51.15L481.287,0.501H30.713z M395.754,109.646\r
+		l-2.567,28.596l-1.128,12.681h-0.187H256h-0.197h-79.599l5.155,57.761h74.444H256h115.723h15.201l-1.377,15.146l-13.255,148.506\r
+		l-0.849,9.523L256,413.854v0.012l-0.259,0.072l-115.547-32.078l-7.903-88.566h26.098h30.526l4.016,44.986l62.82,16.965l0.052-0.014\r
 		v-0.006l62.916-16.977l6.542-73.158H256h-0.197H129.771l-13.863-155.444l-1.351-15.131h141.247H256h141.104L395.754,109.646z`
           })
         })
@@ -11027,56 +11027,64 @@ const o3 = ({ ...e }) =>
     { id: 11, label: 'Python', element: Mb }
   ],
   Hc = [
-    { src: '/src/assets/images/elchemy.webp', alt: 'Image 1' },
-    { src: '/src/assets/images/mitsu.png', alt: 'Image 2' },
-    { src: '/src/assets/images/videoverse.png', alt: 'Image 3' }
+    { src: '/assets/elchemy-ss1.png', alt: 'Image 1' },
+    { src: '/assets/elchemy-ss2.png', alt: 'Image 2' },
+    { src: '/assets/mitsu-ss2.png', alt: 'Image 3' },
+    { src: '/assets/mitsu-ss3.png', alt: 'Image 4' },
+    { src: '/assets/coditas.jpg', alt: 'Image 5' }
   ],
   Ub = [
     {
+      id: 1,
       label: 'Vendor Management System',
       client: 'Elchemy',
       desc: "As a part of team, we developed an application to automate the manual process of registration, validation, and approval of an order for export/import. This was achieved using a combination of React Hook Form, APIs, and Data Grid. I utilized React Hook Form to create and manage forms in the application. The application followed a proper folder structure that helped in storing the common components at one place. This approach promotes code reusability and scalability, making the code cleaner and more maintainable. I maintained regular communications with the client about the scope of particular features, backend dependencies, bug fixes, and estimations. This ensured that the application was built according to the client's requirements and expectations.",
-      image: '/src/assets/images/elchemy.webp',
+      image: '/assets/elchemy.webp',
       link: null,
       repo: null
     },
     {
+      id: 2,
       label: 'Patient Management System',
       client: 'Mitsu Care',
       desc: "Leveraging my expertise in React and web development, I played a key role in the creation and maintenance of Mitsu, a guided self- therapy app designed to empower individuals struggling with anxiety or depression.I spearheaded the development of a comprehensive React - based admin dashboard, meticulously crafted to streamline data management, user authentication, and authorization.This intricate dashboard served as the backbone of the app's administrative operations, ensuring seamless user management and secure access control. Additionally, I crafted a dedicated therapist dashboard, complete with detailed patient user profiles, empowering mental health professionals to effectively track and manage their clients' progress.Furthermore, I meticulously optimized all components to ensure seamless compatibility across diverse browsers and devices, guaranteeing an exceptional user experience for all Mitsu users.",
-      image: '/src/assets/images/mitsu.png',
+      image: '/assets/mitsu.png',
       link: null,
       repo: null
     },
     {
+      id: 3,
       label: 'A NextGen Video Creation & Editor App',
       client: 'VideoVerse TITAN',
       desc: 'In a recent project, I was part of a team that developed a cutting-edge sports event highlight generation platform. This platform was designed to orchestrate a skilled team and leverage AWS infrastructure to deliver dynamic, shareable highlights for live sporting events. The platform was designed to ingest broadcast streams, identify valuable match moments through AI-trained computer vision, and then encode delivery streams with metadata across user devices. I also collaborated with the team on resolving major priority functional and UI bugs in the project. This collaborative effort ensured that the platform was bug-free and provided a seamless user experience.',
-      image: '/src/assets/images/videoverse.png',
+      image: '/assets/videoverse.png',
       link: null,
       repo: null
     },
     {
+      id: 4,
       label: 'Widefield',
       client: 'Widefield',
       desc: "Widefield is an security management system which aims at providing security solutions for users connected across different devices. To guarantee the integrity and reliability of the application's codebase, I meticulously crafted Jest test cases for both individual components and overarching main views. These comprehensive test cases thoroughly examined every facet of the application's functionality, ensuring that each component and view behaved as intended. By implementing a rigorous testing methodology, I effectively safeguarded the application's stability and robustness, preventing potential issues from reaching production and impacting user experience. My dedication to comprehensive testing practices contributed significantly to the delivery of a high-quality, bug-free application.",
-      image: '/src/assets/images/widefield-logo.jpg',
+      image: '/assets/widefield-logo.jpg',
       link: null,
       repo: null
     },
     {
+      id: 5,
       label: 'Connect',
       client: 'Coditas',
       desc: 'To explore the potential of real-time chat capabilities, I embarked on the development of a proof-of-concept (POC) web application utilizing Next.js and Web Sockets. This project involved integrating the application with the WhatsApp API, enabling seamless communication with WhatsApp accounts. To achieve this integration, I conducted thorough research on Web Sockets, gaining a comprehensive understanding of their implementation and application. By leveraging this knowledge, I successfully integrated the WhatsApp API into the POC, enabling users to effortlessly send and receive messages directly from their WhatsApp accounts within the web application. This innovative approach not only enhanced the user experience but also demonstrated the feasibility of incorporating real-time chat features into web applications.',
-      image: '/src/assets/images/coditas.jpg',
+      image: '/assets/coditas.jpg',
       link: null,
       repo: null
     },
     {
+      id: 6,
       label: 'Components Library',
       client: '@saurabh-chauhan/sc-components-library',
       desc: 'Aspiring to create a foundational resource for React developers, I embarked on the development of a high-quality, generic React components library and published library to npmjs. Guided by principles of accessibility and code quality, I meticulously crafted components that are not only flexible and customizable but also adhere to the highest standards of accessibility. Each component was meticulously designed and extensively tested to ensure seamless integration and optimal performance, empowering developers to build a wide variety of applications with ease and efficiency. By prioritizing accessibility and code quality, I created a valuable asset for the React community, enabling developers to create accessible and robust applications with minimal effort.',
-      image: '/src/assets/images/coditas.jpg',
+      image: '/assets/coditas.jpg',
       link: 'https://www.npmjs.com/package/@saurabh-chauhan/sc-components-library',
       repo: null
     }
@@ -31339,21 +31347,25 @@ const Cj = '_container_lb0om_1',
         })
       ]
     }),
-  Xj = '_imageCarousel_c5v2y_1',
-  Zj = '_carouselImage_c5v2y_7',
-  Qj = '_carouselButton_c5v2y_15',
+  Xj = '_imageCarousel_w7ier_1',
+  Zj = '_carouselImage_w7ier_7',
+  Qj = '_carouselButton_w7ier_15',
   hd = { imageCarousel: Xj, carouselImage: Zj, carouselButton: Qj },
-  Jj = () => {
-    const [e, t] = p.useState(0),
-      n = () => {
-        const r = (e + 1) % Hc.length;
-        console.log(r), t(r);
+  Jj = ({ CAROUSEL_IMAGES: e, fallBack: t }) => {
+    const [n, r] = p.useState(0),
+      o = () => {
+        const i = (n + 1) % e.length;
+        console.log(i), r(i);
       };
     return _.jsxs('div', {
       className: hd.imageCarousel,
       children: [
-        _.jsx('img', { src: Hc[e].src, alt: Hc[e].alt, className: hd.carouselImage }),
-        _.jsx(C_, { onClick: n, className: hd.carouselButton, children: 'Next' })
+        _.jsx('img', {
+          src: e[n] ? e[n].src : t,
+          alt: e[n] ? e[n].alt : 'image',
+          className: hd.carouselImage
+        }),
+        _.jsx(C_, { onClick: o, className: hd.carouselButton, disabled: !e[n], children: 'Next' })
       ]
     });
   },
@@ -31435,7 +31447,20 @@ const Cj = '_container_lb0om_1',
   },
   hF = () => {
     const [e, t] = p.useState(!1),
-      [n, r] = p.useState();
+      [n, r] = p.useState(Hc),
+      [o, i] = p.useState();
+    function a(l) {
+      switch ((t(!e), i(l), l.id)) {
+        case 1:
+          r(Hc.slice(0, 2));
+          break;
+        case 2:
+          r(Hc.slice(2, 4));
+          break;
+        default:
+          r([]);
+      }
+    }
     return _.jsxs('div', {
       className: Er.container,
       id: 'projects-section',
@@ -31446,20 +31471,18 @@ const Cj = '_container_lb0om_1',
         }),
         _.jsx('section', {
           className: Er.grid,
-          children: Ub.map((o, i) =>
+          children: Ub.map((l, s) =>
             _.jsxs(
               Kk,
               {
                 className: Er.card,
-                onClick: () => {
-                  t(!e), r(o);
-                },
+                onClick: () => a(l),
                 children: [
-                  _.jsx(We, { variant: 'h3', className: Er.subtext, children: o.label }),
-                  _.jsx('img', { src: o.image, alt: o.label, className: Er.logo })
+                  _.jsx(We, { variant: 'h3', className: Er.subtext, children: l.label }),
+                  _.jsx('img', { src: l.image, alt: l.label, className: Er.logo })
                 ]
               },
-              i
+              s
             )
           )
         }),
@@ -31471,19 +31494,19 @@ const Cj = '_container_lb0om_1',
           children: _.jsxs(O_, {
             sx: { height: '80%', width: '70%', overflowY: 'scroll', borderRadius: '8px' },
             children: [
-              _.jsx(Jj, {}),
+              _.jsx(Jj, { CAROUSEL_IMAGES: n, fallBack: o == null ? void 0 : o.image }),
               _.jsxs(D_, {
                 children: [
-                  _.jsx(We, { variant: 'h5', children: n == null ? void 0 : n.label }),
+                  _.jsx(We, { variant: 'h5', children: o == null ? void 0 : o.label }),
                   _.jsx(Xw, {
                     variant: 'body2',
                     color: 'text.secondary',
-                    children: n == null ? void 0 : n.desc
+                    children: o == null ? void 0 : o.desc
                   })
                 ]
               }),
               _.jsx(L_, {
-                children: _.jsx(oj.View, { title: 'Link', document: n == null ? void 0 : n.link })
+                children: _.jsx(oj.View, { title: 'Link', document: o == null ? void 0 : o.link })
               })
             ]
           })
