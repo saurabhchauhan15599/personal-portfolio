@@ -1,9 +1,13 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
-import { CAROUSEL_IMAGES } from '../../../helpers/constant';
 import css from './index.module.scss';
 
-const ImageCarousel: React.FC = () => {
+interface IImageCarousel {
+  CAROUSEL_IMAGES: { src: string; alt: string }[];
+  fallBack?: string;
+}
+
+const ImageCarousel: React.FC<IImageCarousel> = ({ CAROUSEL_IMAGES, fallBack }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNextClick = () => {
@@ -15,11 +19,15 @@ const ImageCarousel: React.FC = () => {
   return (
     <div className={css.imageCarousel}>
       <img
-        src={CAROUSEL_IMAGES[currentIndex].src}
-        alt={CAROUSEL_IMAGES[currentIndex].alt}
+        src={CAROUSEL_IMAGES[currentIndex] ? CAROUSEL_IMAGES[currentIndex].src : fallBack}
+        alt={CAROUSEL_IMAGES[currentIndex] ? CAROUSEL_IMAGES[currentIndex].alt : 'image'}
         className={css.carouselImage}
       />
-      <Button onClick={handleNextClick} className={css.carouselButton}>
+      <Button
+        onClick={handleNextClick}
+        className={css.carouselButton}
+        disabled={!CAROUSEL_IMAGES[currentIndex]}
+      >
         Next
       </Button>
     </div>
