@@ -1,6 +1,6 @@
 import { components, DropdownIndicatorProps, GroupBase } from 'react-select';
 import ChevronDown from '../../../assets/icons/ChevronDown';
-import ChevronUp from '../../../assets/icons/ChevronUp';
+import ChevronUp from '../../../assets/icons/ChevronDown';
 
 function DropdownIndicator<
   Option,

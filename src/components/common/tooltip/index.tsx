@@ -5,7 +5,6 @@ interface ITooltip {
 
 const Tooltip = (props: ITooltip) => {
   const { children, id = 'tooltip-animation' } = props;
-  console.log(children);
   return (
     <div
       id={id}
