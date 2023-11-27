@@ -1,6 +1,6 @@
+import { ChevronUpIcon } from '@saurabh-chauhan/sc-components-library';
 import { components, DropdownIndicatorProps, GroupBase } from 'react-select';
 import ChevronDown from '../../../assets/icons/ChevronDown';
-import ChevronUp from '../../../assets/icons/ChevronDown';
 
 function DropdownIndicator<
   Option,
@@ -11,7 +11,7 @@ function DropdownIndicator<
   const { menuIsOpen } = selectProps;
   return (
     <components.DropdownIndicator {...props}>
-      {menuIsOpen ? <ChevronUp /> : <ChevronDown />}
+      {menuIsOpen ? <ChevronUpIcon /> : <ChevronDown />}
     </components.DropdownIndicator>
   );
 }

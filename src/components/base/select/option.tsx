@@ -1,6 +1,6 @@
+import { YellowRightTickIcon } from '@saurabh-chauhan/sc-components-library';
 import { MouseEvent, useCallback, useMemo } from 'react';
 import { GroupBase, OptionProps, components } from 'react-select';
-import YellowRightTick from '../../../assets/icons/CrossYellow';
 import CheckboxLabel from '../checkbox/checkbox-label';
 
 function Option<
@@ -33,7 +33,7 @@ function Option<
       ) : (
         label
       )}
-      {isMulti ? null : isSelected ? <YellowRightTick /> : null}
+      {isMulti ? null : isSelected ? <YellowRightTickIcon /> : null}
     </components.Option>
   );
 }
