@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   const { theme } = toggleTheme;
 
   return (
-    <div className="w-auto flex justify-end pt-20 pr-4" id="aboutMe-section">
+    <div className={css.aboutContainer} id="aboutMe-section">
       <section className={css.subcontainer}>
         <Typography className={css.label}>Hello, </Typography>
         <Typography className={css.label}>

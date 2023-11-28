@@ -1,21 +1,42 @@
 @import '../../../styles/resources.scss';
 
-.subcontainer {
+.aboutContainer {
+  width: auto;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10rem 5rem 0 0;
+  animation: fadeIn linear both;
+  animation-timeline: view();
 
-  .label {
+  .subcontainer {
     display: flex;
-    gap: 8px;
-    font-size: 90px;
-    font-family: $font-family-roobert;
-    line-height: 94.5px;
-    color: var(--text-secondary);
-    animation-timeline: view();
-    animation-range: 0 300px;
+    flex-direction: column;
 
-    .secondarylabel {
-      color: var(--text-primary);
+    .label {
+      display: flex;
+      gap: 8px;
+      font-size: 90px;
+      font-family: $font-family-roobert;
+      line-height: 94.5px;
+      color: var(--text-secondary);
+
+      .secondarylabel {
+        color: var(--text-primary);
+      }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

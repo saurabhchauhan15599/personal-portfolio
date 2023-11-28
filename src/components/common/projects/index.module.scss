@@ -1,13 +1,15 @@
 @import 'src/styles/resources.scss';
 
-.container {
+.projectsContainer {
   width: auto;
-  padding: 20rem 2rem;
+  margin: 20rem 2rem 10rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  animation: fadeIn linear both;
+  animation-timeline: view();
 
   .title {
     align-self: flex-start;
@@ -46,5 +48,23 @@
         border-radius: 8px;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }

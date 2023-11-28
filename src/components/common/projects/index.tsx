@@ -1,9 +1,4 @@
-import {
-  CardActions,
-  CardContent,
-  Card as MuiCard,
-  Typography as MuiTypography
-} from '@mui/material';
+import { CardActions, Card as MuiCard } from '@mui/material';
 import { Card, DocumentRow, Modal, Typography } from '@saurabh-chauhan/sc-components-library';
 import { useState } from 'react';
 import { CAROUSEL_IMAGES, PROJECTS_MAP } from '../../../helpers/constant';
@@ -31,7 +26,7 @@ const AddProjects: React.FC = () => {
   }
 
   return (
-    <div className={css.container} id="projects-section">
+    <div className={css.projectsContainer} id="projects-section">
       <section className={css.title}>
         <Typography className={css.label}>Projects,</Typography>
       </section>
@@ -47,20 +42,30 @@ const AddProjects: React.FC = () => {
           );
         })}
       </section>
-      <Modal
-        open={open}
-        disableAutoFocus
-        onClose={() => setOpen(!open)}
-        style={{ overflowY: 'scroll' }}
-      >
-        <MuiCard sx={{ height: '80%', width: '70%', overflowY: 'scroll', borderRadius: '8px' }}>
+      <Modal open={open} disableAutoFocus onClose={() => setOpen(!open)} className={css.modal}>
+        <MuiCard
+          sx={{
+            height: '80%',
+            width: '70%',
+            overflowY: 'scroll',
+            borderRadius: '8px',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
           <ImageCarousel CAROUSEL_IMAGES={carousel} fallBack={data?.image} />
-          <CardContent>
+          <section
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              padding: '0 1rem',
+              paddingTop: '1rem'
+            }}
+          >
             <Typography variant="h5">{data?.label}</Typography>
-            <MuiTypography variant="body2" color="text.secondary">
-              {data?.desc}
-            </MuiTypography>
-          </CardContent>
+            <Typography className={css.desc}>{data?.desc}</Typography>
+          </section>
           <CardActions>
             <DocumentRow.View title="Link" document={data?.link as string} />
           </CardActions>

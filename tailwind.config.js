@@ -6,7 +6,8 @@ export default {
     extend: {
       screens: {},
       animation: {
-        'meteor-effect': 'meteor 5s linear infinite'
+        'meteor-effect': 'meteor 5s linear infinite',
+        'fadeIn-effect': 'fadeIn linear both'
       },
       keyframes: {
         meteor: {
@@ -15,6 +16,14 @@ export default {
           '100%': {
             transform: 'rotate(215deg) translateX(-500px)',
             opacity: 0
+          }
+        },
+        fadeIn: {
+          from: {
+            opacity: 0
+          },
+          to: {
+            opacity: 1
           }
         }
       }
