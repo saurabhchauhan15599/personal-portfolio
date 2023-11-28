@@ -12,7 +12,6 @@ const ImageCarousel: React.FC<IImageCarousel> = ({ CAROUSEL_IMAGES, fallBack }) 
 
   const handleNextClick = () => {
     const nextIndex = (currentIndex + 1) % CAROUSEL_IMAGES.length;
-    console.log(nextIndex);
     setCurrentIndex(nextIndex);
   };
 

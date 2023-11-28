@@ -9,10 +9,12 @@ import AppContextProvider from './helpers/hooks/AppContext';
 import ScrollToTopOnNavigate from './helpers/hooks/useScrollTop';
 import notify from './helpers/toastify-helper';
 import RoutesComp from './router/routes';
+import { getCurrentWeather } from './services/weather.service';
 import './styles/App.scss';
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [coords, setCoords] = useState({ lat: '', lon: '' });
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -22,15 +24,27 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    fetchCurrentWeather();
+  }, [coords]);
+
   function success(position: GeolocationPosition) {
     notify({ message: 'Location fetched successfully!', severity: 'success', dismissible: true });
     const latitude = position?.coords?.latitude;
     const longitude = position.coords?.longitude;
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+    setCoords({
+      lat: `${latitude}`,
+      lon: `${longitude}`
+    });
   }
 
   function error() {
     notify({ message: 'Unable to retrieve your location', severity: 'error' });
+  }
+
+  async function fetchCurrentWeather() {
+    const data = await getCurrentWeather(coords.lat, coords.lon);
+    console.log(data);
   }
 
   return (
