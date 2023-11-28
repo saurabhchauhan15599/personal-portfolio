@@ -14,7 +14,7 @@ const Skills = () => {
       <section className={css.title}>
         <Typography className={css.label}>Skills,</Typography>
       </section>
-      <div className={css.container}>
+      <div className={css.skillsContainer}>
         {skillsArray.map((val, index) => {
           return (
             <div key={index} className={css.subContainer}>

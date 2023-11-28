@@ -4,7 +4,7 @@ import { Typography } from '@saurabh-chauhan/sc-components-library';
 
 const Description: React.FC = () => {
   return (
-    <div className={css.container} id="description-section">
+    <div className={css.descContainer} id="description-section">
       <div>
         <Typography className={css.title}>About, </Typography>
       </div>
