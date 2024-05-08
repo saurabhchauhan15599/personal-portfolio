@@ -4,11 +4,15 @@ import { AppContext } from '../../../helpers/hooks/AppContext';
 import Typography from '../../base/typography';
 import Tooltip from '../tooltip';
 import css from './index.module.scss';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Skills = () => {
   const { appState } = useContext(AppContext);
   const { toggleTheme } = appState;
   const { theme } = toggleTheme;
+  const mobileLayout = useMediaQuery('(max-width:480px)');
+  const tabletLayout = useMediaQuery('(max-width:768px)');
+
   return (
     <section className={css.skills} id="skills-section">
       <section className={css.title}>
@@ -22,6 +26,7 @@ const Skills = () => {
                 <Typography>{val.label}</Typography>
               </Tooltip>
               <val.element
+                height={mobileLayout ? 80 : tabletLayout ? 150 : ''}
                 data-tooltip-target={`tooltip-animation-${index}`}
                 color={theme === DARK_MODE_MAP.dark ? '#ffffff' : '#000000'}
               />

@@ -82,8 +82,8 @@ export const primaryNavigation = [
 ];
 
 export const secondaryNavigation = [
-  { id: 1, link: 'https://www.linkedin.com/feed/', component: GithubOutlined },
-  { id: 1, link: 'https://www.linkedin.com/feed/', component: Linkedin }
+  { id: 1, link: 'https://github.com/saurabhchauhan15599', component: GithubOutlined, label: "Github" },
+  { id: 2, link: 'https://linkedin.com/in/saurabh-chauhan-091221195', component: Linkedin, label: "LinkedIn" },
 ];
 
 export const DARK_MODE_MAP = {

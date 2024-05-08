@@ -52,7 +52,7 @@ function App() {
       <HelmetProvider>
         <Router>
           <AppContextProvider>
-            <Meteors number={10} />
+            {/* <Meteors number={10} /> */}
             <Header theme={theme} setTheme={setTheme} />
             <RoutesComp />
             <ScrollToTopOnNavigate />
