@@ -4,7 +4,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/common/header';
-import { Meteors } from './components/common/meteor-effect';
 import AppContextProvider from './helpers/hooks/AppContext';
 import ScrollToTopOnNavigate from './helpers/hooks/useScrollTop';
 import notify from './helpers/toastify-helper';

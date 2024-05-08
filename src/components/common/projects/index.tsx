@@ -6,7 +6,7 @@ import {
   CarouselPrevious
 } from '@/components/shadcn/ui/carousel';
 import { Dialog, DialogContent } from '@/components/shadcn/ui/dialog';
-import { CardActions, useMediaQuery } from '@mui/material';
+import { CardActions } from '@mui/material';
 import { Card, DocumentRow, Typography } from '@saurabh-chauhan/sc-components-library';
 import { useState } from 'react';
 import { CAROUSEL_IMAGES, PROJECTS_MAP } from '../../../helpers/constant';
