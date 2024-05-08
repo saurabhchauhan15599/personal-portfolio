@@ -1,8 +1,15 @@
-import { CardActions, Card as MuiCard } from '@mui/material';
-import { Card, DocumentRow, Modal, Typography } from '@saurabh-chauhan/sc-components-library';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/shadcn/ui/carousel';
+import { Dialog, DialogContent } from '@/components/shadcn/ui/dialog';
+import { CardActions, useMediaQuery } from '@mui/material';
+import { Card, DocumentRow, Typography } from '@saurabh-chauhan/sc-components-library';
 import { useState } from 'react';
 import { CAROUSEL_IMAGES, PROJECTS_MAP } from '../../../helpers/constant';
-import ImageCarousel from '../carousel';
 import css from './index.module.scss';
 
 const AddProjects: React.FC = () => {
@@ -42,18 +49,19 @@ const AddProjects: React.FC = () => {
           );
         })}
       </section>
-      <Modal open={open} disableAutoFocus onClose={() => setOpen(!open)} className={css.modal}>
-        <MuiCard
-          sx={{
-            height: '80%',
-            width: '70%',
-            overflowY: 'scroll',
-            borderRadius: '8px',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <ImageCarousel CAROUSEL_IMAGES={carousel} fallBack={data?.image} />
+      <Dialog open={open} onOpenChange={() => setOpen(!open)}>
+        <DialogContent className="sm:max-w-[900px]">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {carousel.map((val, index) => (
+                <CarouselItem key={index}>
+                  <img src={val.src} className="carousel" alt={val.alt} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
           <section
             style={{
               display: 'flex',
@@ -69,8 +77,8 @@ const AddProjects: React.FC = () => {
           <CardActions>
             <DocumentRow.View title="Link" document={data?.link as string} />
           </CardActions>
-        </MuiCard>
-      </Modal>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

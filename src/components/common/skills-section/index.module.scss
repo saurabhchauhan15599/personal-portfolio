@@ -14,7 +14,7 @@
     display: grid;
     grid-row-gap: 4rem;
     grid-column-gap: 5rem;
-    grid-template-columns: repeat(6, fit-content(300px));
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .title {
@@ -47,5 +47,39 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 780px) {
+  .skills {
+    .skillsContainer {
+      display: grid;
+      grid-row-gap: 4rem;
+      grid-column-gap: 5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .title {
+      .label {
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .skills {
+    .skillsContainer {
+      display: grid;
+      grid-row-gap: 4rem;
+      grid-column-gap: 5rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+      .label {
+        font-size: 50px;
+      }
+    }
   }
 }
