@@ -1,16 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Button } from '@/components/shadcn/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger
 } from '@/components/shadcn/ui/dropdown-menu';
 import { useMediaQuery } from '@mui/material';
+import { ChevronDown } from 'lucide-react';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AlertSuccess from '../../../assets/icons/AlertSuccess';
@@ -20,7 +17,6 @@ import Divider from '../../base/divider';
 import Typography from '../../base/typography';
 import ThemeToggler from '../switch';
 import css from './index.module.scss';
-import { ChevronDown } from 'lucide-react';
 
 interface IHeader {
   theme?: string;
