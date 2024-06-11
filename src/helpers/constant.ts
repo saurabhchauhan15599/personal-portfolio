@@ -76,9 +76,9 @@ export const SERVER_CONFIG = {
 export const PHONE_NUMBER_REGEX = /^[6-9]\d{9}$/;
 
 export const primaryNavigation = [
-  { id: 2, link: '#description-section', label: 'About' },
-  { id: 3, link: '#skills-section', label: 'Skills' },
-  { id: 3, link: '#projects-section', label: 'Projects' }
+  { id: 2, link: 'description-section', label: 'About' },
+  { id: 3, link: 'skills-section', label: 'Skills' },
+  { id: 3, link: 'projects-section', label: 'Projects' }
 ];
 
 export const secondaryNavigation = [
@@ -94,16 +94,14 @@ export const DARK_MODE_MAP = {
 export const skillsArray = [
   { id: 1, label: 'React', element: ReactIcon },
   { id: 2, label: 'Next', element: NextJSIcon },
-  { id: 3, label: 'Vite', element: ViteIcon },
-  { id: 4, label: 'Typescript', element: TSIcon },
-  { id: 5, label: 'Javascript', element: JSIcon },
-  { id: 6, label: 'HTML5', element: HTMLIcon },
-  { id: 7, label: 'CSS3', element: CSSIcon },
-  { id: 8, label: 'SASS', element: SASSIcon },
-  { id: 9, label: 'Material UI', element: MUIIcon },
-  { id: 10, label: 'Tailwind CSS', element: TailwindIcon },
-  { id: 11, label: 'Axios', element: AxiosIcon },
-  { id: 11, label: 'Python', element: PythonIcon }
+  { id: 3, label: 'Typescript', element: TSIcon },
+  { id: 4, label: 'Javascript', element: JSIcon },
+  { id: 5, label: 'HTML5', element: HTMLIcon },
+  { id: 6, label: 'CSS3', element: CSSIcon },
+  { id: 7, label: 'SASS', element: SASSIcon },
+  { id: 8, label: 'Material UI', element: MUIIcon },
+  { id: 9, label: 'Tailwind CSS', element: TailwindIcon },
+  { id: 10, label: 'Python', element: PythonIcon }
 ];
 
 export const CAROUSEL_IMAGES = [

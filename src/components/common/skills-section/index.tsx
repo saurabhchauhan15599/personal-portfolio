@@ -22,9 +22,6 @@ const Skills = () => {
         {skillsArray.map((val, index) => {
           return (
             <div key={index} className={css.subContainer}>
-              <Tooltip id={`tooltip-animation-${index}`}>
-                <Typography>{val.label}</Typography>
-              </Tooltip>
               <val.element
                 height={mobileLayout ? 80 : tabletLayout ? 150 : ''}
                 data-tooltip-target={`tooltip-animation-${index}`}

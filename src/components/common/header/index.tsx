@@ -9,7 +9,6 @@ import {
 import { useMediaQuery } from '@mui/material';
 import { ChevronDown } from 'lucide-react';
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import AlertSuccess from '../../../assets/icons/AlertSuccess';
 import { DARK_MODE_MAP, primaryNavigation, secondaryNavigation } from '../../../helpers/constant';
 import { AppContext } from '../../../helpers/hooks/AppContext';
@@ -29,6 +28,15 @@ const Header = (props: IHeader) => {
   const { theme, setTheme = () => {} } = props;
   const mobileLayout = useMediaQuery('(max-width:480px)');
 
+  const smoothScrollTo = (targetId: string) => {
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className={css.header}>
       <section className={css.title}>
@@ -40,8 +48,8 @@ const Header = (props: IHeader) => {
         <div className={css.primary}>
           {primaryNavigation.map((val, index) => {
             return (
-              <Typography key={index} className={css.link}>
-                <Link to={val.link}>{val.label}</Link>
+              <Typography key={index} className={css.link} onClick={() => smoothScrollTo(val.link)}>
+                {val.label}
               </Typography>
             );
           })}
