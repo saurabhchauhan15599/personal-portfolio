@@ -1,4 +1,3 @@
-import AxiosIcon from '../assets/icons/AxiosIcon';
 import CSSIcon from '../assets/icons/CSSIcon';
 import GithubOutlined from '../assets/icons/GithubOutlined';
 import HTMLIcon from '../assets/icons/HtmlIcon';
@@ -11,7 +10,6 @@ import ReactIcon from '../assets/icons/ReactIcon';
 import SASSIcon from '../assets/icons/SASSIcon';
 import TailwindIcon from '../assets/icons/TailwindIcon';
 import TSIcon from '../assets/icons/TsIcon';
-import ViteIcon from '../assets/icons/ViteIcon';
 
 export const alertIconMapping: Record<string, string> = {
   error: 'alertError',

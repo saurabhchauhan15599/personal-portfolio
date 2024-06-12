@@ -1,10 +1,9 @@
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { useContext } from 'react';
 import { DARK_MODE_MAP, skillsArray } from '../../../helpers/constant';
 import { AppContext } from '../../../helpers/hooks/AppContext';
 import Typography from '../../base/typography';
-import Tooltip from '../tooltip';
 import css from './index.module.scss';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Skills = () => {
   const { appState } = useContext(AppContext);
