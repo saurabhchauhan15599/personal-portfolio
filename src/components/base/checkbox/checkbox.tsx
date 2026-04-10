@@ -11,12 +11,7 @@ import {
   useState
 } from 'react';
 
-import CheckedCheckboxIntermediate from '../../../assets/icons/CheckboxInt';
-import CheckedCheckbox from '../../../assets/icons/CheckedCheckbox';
-import DisabledCheckbox from '../../../assets/icons/DisabledCheckbox';
-import CheckboxDisabledIntermediate from '../../../assets/icons/DisabledCheckboxInt';
-import UncheckedCheckbox from '../../../assets/icons/UncheckedCheckbox';
-import UncheckedDisabledCheckbox from '../../../assets/icons/UncheckedCheckboxDisabled';
+import { Check, Minus } from 'lucide-react';
 import './index.style.scss';
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -44,23 +39,46 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
 
   const renderCheckbox = useMemo(() => {
     const { disabled } = props;
-    return disabled ? (
-      indeterminate ? (
-        <CheckboxDisabledIntermediate className="checkbox-svg" />
-      ) : checkboxState ? (
-        <DisabledCheckbox className="checkbox-svg" />
-      ) : (
-        <UncheckedDisabledCheckbox className="checkbox-svg" />
-      )
-    ) : indeterminate ? (
-      <CheckedCheckboxIntermediate className="checkbox-svg" />
-    ) : checkboxState ? (
-      <div className="checkedContainer">
-        <CheckedCheckbox className="checkbox-svg" />
-      </div>
-    ) : (
-      <UncheckedCheckbox className="checkbox-svg" />
-    );
+    const baseClass = 'checkbox-svg flex items-center justify-center rounded-md border text-white transition-colors';
+
+    if (disabled) {
+      return (
+        <div
+          className={`${baseClass} border-gray-300 bg-gray-100 text-gray-400`}
+          style={{ width: 18, height: 18 }}
+        >
+          {indeterminate ? (
+            <Minus className="h-4 w-4" strokeWidth={3} />
+          ) : checkboxState ? (
+            <Check className="h-4 w-4" strokeWidth={3} />
+          ) : null}
+        </div>
+      );
+    }
+
+    if (indeterminate) {
+      return (
+        <div
+          className={`${baseClass} border-blue-600 bg-blue-50 text-blue-600`}
+          style={{ width: 18, height: 18 }}
+        >
+          <Minus className="h-4 w-4" strokeWidth={3} />
+        </div>
+      );
+    }
+
+    if (checkboxState) {
+      return (
+        <div
+          className={`${baseClass} border-green-600 bg-green-600`}
+          style={{ width: 18, height: 18 }}
+        >
+          <Check className="h-4 w-4" strokeWidth={4} />
+        </div>
+      );
+    }
+
+    return <div className={`${baseClass} border-gray-400`} style={{ width: 18, height: 18 }} />;
   }, [props.indeterminate, checkboxState, props.disabled]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

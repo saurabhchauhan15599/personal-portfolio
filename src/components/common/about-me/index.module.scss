@@ -1,66 +1,80 @@
 @import '../../../styles/resources.scss';
 
 .aboutContainer {
-  width: auto;
-  height: auto;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10rem 5rem 0 0;
-  animation: fadeIn linear both;
-  animation-timeline: view();
+  padding: clamp(1.8rem, 4vw, 3.2rem) clamp(1.25rem, 5vw, 5rem) 0.4rem;
+  font-family: $font-family-body;
 
   .subcontainer {
     display: flex;
     flex-direction: column;
+    gap: 0.85rem;
+    max-width: 900px;
 
-    .label {
+    .titleSection {
       display: flex;
-      gap: 8px;
-      font-size: 90px;
-      font-family: $font-family-roobert;
-      line-height: 94.5px;
-      color: var(--text-secondary);
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
 
-      .secondarylabel {
-        color: var(--text-primary);
+      .label {
+        display: flex;
+        gap: 0.5rem;
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 800;
+        font-family: $font-family-body;
+        line-height: 1.0;
+        color: var(--text-secondary);
+
+        .secondarylabel {
+          color: var(--text-primary);
+        }
+      }
+
+      .accentLine {
+        width: 100px;
+        height: 6px;
+        background: var(--accent-color, #0f766e);
+        border-radius: 3px;
       }
     }
-  }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+    .greeting {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .role {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .caption {
+      max-width: 720px;
+      font-size: clamp(0.95rem, 1.7vw, 1.1rem);
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .svg {
+      margin-top: 0.6rem;
+      width: fit-content;
+    }
   }
 }
 
 @media only screen and (max-width: 450px) {
   .aboutContainer {
-    justify-content: flex-start;
-    align-items: center;
-
     .subcontainer {
       .label {
-        font-size: 50px;
-        gap: 4px;
+        gap: 0.25rem;
         align-items: center;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .aboutContainer {
-    .subcontainer {
-      .label {
-        font-size: 60px;
       }
     }
   }

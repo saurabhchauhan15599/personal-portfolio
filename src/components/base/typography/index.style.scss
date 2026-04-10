@@ -1,8 +1,8 @@
-@import '../../../styles/resources.scss';
+@import '../../../styles/variables';
 
 .typography--variant-h1 {
   // used
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-weight: $font-weight-500;
   color: $grey-color-500;
   font-size: $font-size-header;
@@ -10,7 +10,7 @@
 }
 
 .typography--variant-h2 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 32px;
   font-weight: 500;
   color: $color-slate-brown-1;
@@ -18,7 +18,7 @@
 }
 
 .typography--variant-h2mid {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 28px;
   font-weight: 500;
   color: $color-slate-brown-1;
@@ -27,7 +27,7 @@
 
 .typography--variant-h3 {
   // used
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 24px;
   font-weight: 500;
   color: $color-slate-brown-1;
@@ -35,7 +35,7 @@
 }
 
 .typography--variant-h4 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 20px;
   font-weight: 500;
   color: $color-slate-brown-1;
@@ -43,7 +43,7 @@
 }
 
 .typography--variant-h5 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 28px;
   font-weight: 400;
   color: $grey-color-500;
@@ -51,7 +51,7 @@
 }
 
 .typography--variant-h6 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-size: 14;
   font-weight: 700;
   color: $color-grey-7;
@@ -61,28 +61,28 @@
 .typography--variant-subheading1 {
   line-height: 28px;
   font-size: 12px;
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-weight: $font-weight-400;
   color: #515561;
   line-height: 140%;
 }
 
 .typography--variant-subheading2 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-weight: 400;
   font-size: 24px;
   color: $color-black;
 }
 
 .typography--variant-subheading3 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-heading;
   font-weight: 400;
   font-size: 18px;
   color: $color-black;
 }
 
 .typography--variant-body {
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 20px;
   font-weight: 400;
   color: $color-slate-brown-1;
@@ -90,7 +90,7 @@
 }
 
 .typography--variant-body2 {
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 20px;
   font-weight: 350;
   color: $color-slate-brown-1;
@@ -98,7 +98,7 @@
 
 .typography--variant-span {
   //used
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-weight: 400;
   font-size: 18;
   color: $color-grey-6;
@@ -107,7 +107,7 @@
 
 .typography--variant-p {
   //used
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 16px;
   font-weight: 400;
   color: $color-slate-brown-1;
@@ -115,14 +115,15 @@
 }
 
 .typography--variant-ptext {
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 16;
   font-weight: 400;
   color: $elchemy-text-2;
   line-height: 19px;
 }
+
 .typography--variant-pdoc {
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 16;
   font-weight: 500;
   color: $color-slate-brown-1;
@@ -131,7 +132,7 @@
 
 .typography--variant-label {
   //label
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 16px;
   font-weight: 400;
   color: $grey-color-400;
@@ -140,7 +141,7 @@
 
 .typography--variant-label2 {
   //label
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 20px;
   font-weight: 350;
   color: $grey-color-400;
@@ -163,7 +164,7 @@
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .typography--variant-h1 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-weight: $font-weight-500;
     color: $grey-color-500;
     font-size: 20px;
@@ -172,14 +173,14 @@
 
   .typography--variant-subheading1 {
     line-height: 140%;
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-weight: $font-weight-400;
     color: $grey-color-400;
     font-size: 16px;
   }
 
   .typography--variant-body {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-size: 12px;
     font-weight: 400;
     color: $color-slate-brown-1;
@@ -187,7 +188,7 @@
   }
 
   .typography--variant-h2 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-size: 18px;
     font-weight: 500;
     color: $color-slate-brown-1;
@@ -195,7 +196,7 @@
   }
 
   .typography--variant-h3 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-weight: $font-weight-500;
     color: $grey-color-500;
     font-size: 20px;
@@ -203,35 +204,37 @@
   }
 
   .typography--variant-label {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-size: 12px;
     font-weight: 400;
     color: $grey-color-400;
   }
 
   .typography--variant-h4 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-size: 18px;
     font-weight: 500;
     color: $color-slate-brown-1;
     line-height: normal;
   }
+
   .typography--variant-h5 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-size: 18px;
     font-weight: 400;
     color: $grey-color-500;
     line-height: 140%;
   }
+
   .typography--variant-subheading2 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-weight: 400;
     font-size: 16px;
     color: $color-black;
   }
 
   .typography--variant-subheading3 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-weight: 400;
     font-size: 14px;
     color: $color-black;
@@ -239,7 +242,7 @@
 
   .typography--variant-label2 {
     //label
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-size: 16px;
     font-weight: 400;
     color: $grey-color-400;
@@ -247,7 +250,7 @@
   }
 
   .typography--variant-h2mid {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-size: 16px;
     font-weight: 500;
     color: $color-slate-brown-1;
@@ -255,7 +258,7 @@
   }
 
   .typography--variant-body2 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-size: 16px;
     font-weight: 350;
     color: $color-slate-brown-1;
@@ -264,7 +267,7 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .typography--variant-h1 {
-    font-family: $font-family-poppins;
+    font-family: $font-family-heading;
     font-weight: $font-weight-500;
     color: $grey-color-500;
     font-size: 22px;
@@ -273,14 +276,14 @@
 
   .typography--variant-subheading1 {
     line-height: 140%;
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-weight: $font-weight-400;
     color: $grey-color-400;
     font-size: 18px;
   }
 
   .typography--variant-body {
-    font-family: $font-family-poppins;
+    font-family: $font-family-body;
     font-size: 14px;
     font-weight: 400;
     color: $color-slate-brown-1;

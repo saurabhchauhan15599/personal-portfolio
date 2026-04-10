@@ -6,6 +6,17 @@
   background-color: $white;
   border-radius: 12px;
   box-shadow: 0px 2.194533586502075px 7.2486114501953125px 0px rgba(6, 139, 170, 0.06);
+  border: 0;
+  text-align: left;
+}
+
+.cardContainer:disabled {
+  cursor: default;
+}
+
+.cardContainer:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 @media screen and (max-width: 480px) {

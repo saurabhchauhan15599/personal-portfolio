@@ -10,8 +10,14 @@ const ThemeToggler = (props: ISwitch) => {
 
   return (
     <div className="toggle">
-      <input type="checkbox" onChange={onChange} checked={checked} />
-      <label></label>
+      <input
+        id="theme-toggle"
+        type="checkbox"
+        onChange={onChange}
+        checked={checked}
+        aria-label="Toggle theme"
+      />
+      <label htmlFor="theme-toggle"></label>
     </div>
   );
 };

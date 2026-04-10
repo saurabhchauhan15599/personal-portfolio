@@ -1,68 +1,82 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/common/header';
+import Seo from './components/common/seo';
 import AppContextProvider from './helpers/hooks/AppContext';
-import ScrollToTopOnNavigate from './helpers/hooks/useScrollTop';
 import notify from './helpers/toastify-helper';
 import RoutesComp from './router/routes';
 import { getCurrentWeather } from './services/weather.service';
 import './styles/App.scss';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-  const [coords, setCoords] = useState({ lat: '', lon: '' });
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light');
+  const [weatherTag, setWeatherTag] = useState('rainy');
+  const weatherApiKey = import.meta.env.REACT_APP_OPEN_WEATHER_API;
+  const weatherEnabled = useMemo(() => Boolean(weatherApiKey), [weatherApiKey]);
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, error);
-    } else {
-      notify({ message: 'Geolocation not supported', severity: 'error', dismissible: true });
-    }
-  }, []);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   useEffect(() => {
-    fetchCurrentWeather();
-  }, [coords]);
+    if (!weatherEnabled || !navigator.geolocation) return;
 
-  function success(position: GeolocationPosition) {
-    notify({ message: 'Location fetched successfully!', severity: 'success', dismissible: true });
-    const latitude = position?.coords?.latitude;
-    const longitude = position.coords?.longitude;
-    setCoords({
-      lat: `${latitude}`,
-      lon: `${longitude}`
-    });
-  }
+    const onSuccess = async (position: GeolocationPosition) => {
+      try {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const data = await getCurrentWeather(`${latitude}`, `${longitude}`);
+        const currentWeather = (data as { weather?: Array<{ main?: string }> })?.weather?.[0]?.main
+          ?.toLowerCase?.() ?? 'default';
 
-  function error() {
-    notify({ message: 'Unable to retrieve your location', severity: 'error' });
-  }
+        if (currentWeather.includes('rain')) setWeatherTag('rainy');
+        else if (currentWeather.includes('cloud')) setWeatherTag('cloudy');
+        else if (currentWeather.includes('clear')) setWeatherTag('clear');
+        else setWeatherTag('default');
+      } catch {
+        setWeatherTag('default');
+      }
+    };
 
-  async function fetchCurrentWeather() {
-    const data = await getCurrentWeather(coords.lat, coords.lon);
-    console.log(data);
-  }
+    const onError = () => {
+      setWeatherTag('default');
+      notify({
+        message: 'Location access denied. Using default portfolio theme.',
+        severity: 'info',
+        dismissible: true
+      });
+    };
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 5000 });
+  }, [weatherEnabled]);
+
+  const themeClassName = theme === 'dark' ? 'dark' : '';
 
   return (
-    <main className="app" data-theme={theme}>
+    <main className={`app ${themeClassName}`} data-theme={theme} data-weather={weatherTag}>
       <HelmetProvider>
+        <Seo title="Frontend Engineer">
+          <meta
+            name="description"
+            content="Portfolio of Saurabh Chauhan - Frontend Engineer building high-traffic e-commerce experiences."
+          />
+        </Seo>
         <Router>
           <AppContextProvider>
-            {/* <Meteors number={10} /> */}
             <Header theme={theme} setTheme={setTheme} />
             <RoutesComp />
-            <ScrollToTopOnNavigate />
+            {/* <ScrollToTopOnNavigate /> */}
             <ToastContainer
-              autoClose={4000}
+              autoClose={3000}
               position="top-center"
               closeButton={false}
               hideProgressBar
               pauseOnFocusLoss={false}
               closeOnClick={false}
-              limit={3}
+              limit={2}
             />
           </AppContextProvider>
         </Router>

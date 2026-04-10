@@ -7,76 +7,103 @@ import {
 } from '@/components/shadcn/ui/carousel';
 import { Dialog, DialogContent } from '@/components/shadcn/ui/dialog';
 import { CardActions } from '@mui/material';
-import { Card, DocumentRow, Typography } from '@saurabh-chauhan/sc-components-library';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { CAROUSEL_IMAGES, PROJECTS_MAP } from '../../../helpers/constant';
+import Card from '../card';
+import Typography from '../../base/typography';
 import css from './index.module.scss';
+
+type PortfolioProject = (typeof PROJECTS_MAP)[number];
 
 const AddProjects: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [carousel, setCarousel] = useState(CAROUSEL_IMAGES);
-  const [data, setData] = useState<(typeof PROJECTS_MAP)[0]>();
+  const [data, setData] = useState<PortfolioProject | null>(null);
 
-  function handleCardClick(val: (typeof PROJECTS_MAP)[0]) {
-    setOpen(!open);
+  function handleCardClick(val: PortfolioProject) {
+    setOpen(true);
     setData(val);
-    switch (val.id) {
-      case 1:
-        setCarousel(CAROUSEL_IMAGES.slice(0, 2));
-        break;
-      case 2:
-        setCarousel(CAROUSEL_IMAGES.slice(2, 4));
-        break;
-      default:
-        setCarousel([]);
-    }
   }
+
+  const carousel = useMemo(() => {
+    if (!data?.isNda) return [];
+    if (data.id === 1) return CAROUSEL_IMAGES.slice(0, 3);
+    if (data.id === 3) return CAROUSEL_IMAGES.slice(2, 5);
+    return CAROUSEL_IMAGES.slice(0, 2);
+  }, [data]);
 
   return (
     <div className={css.projectsContainer} id="projects-section">
-      <section className={css.title}>
-        <Typography className={css.label}>Projects,</Typography>
+      <section className={css.titleSection}>
+        <Typography variant="h2" className={css.label}>
+          Projects
+        </Typography>
+        <div className={css.accentLine} />
       </section>
       <section className={css.grid}>
-        {PROJECTS_MAP.map((val, index) => {
+        {PROJECTS_MAP.map((val) => {
           return (
-            <Card key={index} className={css.card} onClick={() => handleCardClick(val)}>
-              <Typography variant="h3" className={css.subtext}>
+            <Card key={val.id} className={css.card} onClick={() => handleCardClick(val)}>
+              <Typography variant="subheading2" className={css.subheading1}>
                 {val.label}
               </Typography>
-              <img src={val.image} alt={val.label} className={css.logo} />
+              <Typography className={css.client}>{val.client}</Typography>
+              {val.image ? (
+                <img src={val.image} alt={val.label} className={css.logo} />
+              ) : (
+                <div className={css.logoPlaceholder}>
+                  <Typography className={css.logoPlaceholderText}>
+                    NDA-safe visual preview available in modal carousel
+                  </Typography>
+                </div>
+              )}
+              <Typography className={css.impact}>{val.impact}</Typography>
             </Card>
           );
         })}
       </section>
-      <Dialog open={open} onOpenChange={() => setOpen(!open)}>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-[900px]">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {carousel.map((val, index) => (
-                <CarouselItem key={index}>
-                  <img src={val.src} className="carousel" alt={val.alt} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-          <section
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1rem',
-              padding: '0 1rem',
-              paddingTop: '1rem'
-            }}
-          >
+          {carousel.length > 0 && (
+            <Carousel className="w-full">
+              <CarouselContent>
+                {carousel.map((val) => (
+                  <CarouselItem key={val.src}>
+                    <img src={val.src} className="carousel" alt={val.alt} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          )}
+          <section className={css.modalContent}>
             <Typography variant="h5">{data?.label}</Typography>
             <Typography className={css.desc}>{data?.desc}</Typography>
+            <div className={css.stackContainer}>
+              {data?.stack?.map((item) => (
+                <span className={css.stackPill} key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+            {data?.isNda && (
+              <Typography className={css.note}>
+                NDA-safe summary. Detailed implementation remains confidential.
+              </Typography>
+            )}
           </section>
-          <CardActions>
-            <DocumentRow.View title="Link" document={data?.link as string} />
-          </CardActions>
+          {data?.link && (
+            <CardActions>
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Visit project
+              </a>
+            </CardActions>
+          )}
         </DialogContent>
       </Dialog>
     </div>

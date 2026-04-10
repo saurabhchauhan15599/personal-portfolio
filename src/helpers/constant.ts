@@ -1,30 +1,4 @@
-import CSSIcon from '../assets/icons/CSSIcon';
-import GithubOutlined from '../assets/icons/GithubOutlined';
-import HTMLIcon from '../assets/icons/HtmlIcon';
-import JSIcon from '../assets/icons/JsIcon';
-import Linkedin from '../assets/icons/LinkedIn';
-import MUIIcon from '../assets/icons/MuiIcon';
-import NextJSIcon from '../assets/icons/NextIcon';
-import PythonIcon from '../assets/icons/PythonIcon';
-import ReactIcon from '../assets/icons/ReactIcon';
-import SASSIcon from '../assets/icons/SASSIcon';
-import TailwindIcon from '../assets/icons/TailwindIcon';
-import TSIcon from '../assets/icons/TsIcon';
-
-export const alertIconMapping: Record<string, string> = {
-  error: 'alertError',
-  info: 'alertInfo',
-  success: 'alertSuccess',
-  warning: 'alertWarning'
-};
-
-export const crossIconMapping: Record<string, string> = {
-  error: 'crossRed',
-  info: 'crossBlue',
-  success: 'crossGreen',
-  warning: 'crossYellow',
-  none: 'crossBlack'
-};
+import { Github, Linkedin } from 'lucide-react';
 
 export const typographyVariantsMapping: Record<string, string> = {
   h1: 'h1',
@@ -76,12 +50,17 @@ export const PHONE_NUMBER_REGEX = /^[6-9]\d{9}$/;
 export const primaryNavigation = [
   { id: 2, link: 'description-section', label: 'About' },
   { id: 3, link: 'skills-section', label: 'Skills' },
-  { id: 3, link: 'projects-section', label: 'Projects' }
+  { id: 4, link: 'projects-section', label: 'Projects' }
 ];
 
 export const secondaryNavigation = [
-  { id: 1, link: 'https://github.com/saurabhchauhan15599', component: GithubOutlined, label: "Github" },
-  { id: 2, link: 'https://linkedin.com/in/saurabh-chauhan-091221195', component: Linkedin, label: "LinkedIn" },
+  { id: 1, link: 'https://github.com/saurabhchauhan15599', component: Github, label: 'Github' },
+  {
+    id: 2,
+    link: 'https://linkedin.com/in/saurabh-chauhan-091221195',
+    component: Linkedin,
+    label: 'LinkedIn'
+  }
 ];
 
 export const DARK_MODE_MAP = {
@@ -90,79 +69,96 @@ export const DARK_MODE_MAP = {
 };
 
 export const skillsArray = [
-  { id: 1, label: 'React', element: ReactIcon },
-  { id: 2, label: 'Next', element: NextJSIcon },
-  { id: 3, label: 'Typescript', element: TSIcon },
-  { id: 4, label: 'Javascript', element: JSIcon },
-  { id: 5, label: 'HTML5', element: HTMLIcon },
-  { id: 6, label: 'CSS3', element: CSSIcon },
-  { id: 7, label: 'SASS', element: SASSIcon },
-  { id: 8, label: 'Material UI', element: MUIIcon },
-  { id: 9, label: 'Tailwind CSS', element: TailwindIcon },
-  { id: 10, label: 'Python', element: PythonIcon }
+  { id: 1, label: 'React', iconUrl: 'https://cdn.simpleicons.org/react' },
+  { id: 2, label: 'Next.js', iconUrl: 'https://cdn.simpleicons.org/nextdotjs' },
+  { id: 3, label: 'Astro.js', iconUrl: 'https://cdn.simpleicons.org/astro' },
+  { id: 4, label: 'TypeScript', iconUrl: 'https://cdn.simpleicons.org/typescript' },
+  { id: 5, label: 'JavaScript', iconUrl: 'https://cdn.simpleicons.org/javascript' },
+  { id: 6, label: 'Redux', iconUrl: 'https://cdn.simpleicons.org/redux' },
+  { id: 7, label: 'Jest', iconUrl: 'https://cdn.simpleicons.org/jest' },
+  { id: 8, label: 'Playwright', iconUrl: 'https://cdn.simpleicons.org/playwright' },
+  { id: 9, label: 'HTML5', iconUrl: 'https://cdn.simpleicons.org/html5' },
+  { id: 10, label: 'CSS3', iconUrl: 'https://cdn.simpleicons.org/css' },
+  { id: 11, label: 'SASS', iconUrl: 'https://cdn.simpleicons.org/sass' },
+  { id: 12, label: 'Tailwind CSS', iconUrl: 'https://cdn.simpleicons.org/tailwindcss' },
+  { id: 13, label: 'Node.js', iconUrl: 'https://cdn.simpleicons.org/nodedotjs' },
+  { id: 14, label: 'Express.js', iconUrl: 'https://cdn.simpleicons.org/express' },
+  { id: 15, label: 'MongoDB', iconUrl: 'https://cdn.simpleicons.org/mongodb' },
+  { id: 16, label: 'Java', iconUrl: 'https://cdn.simpleicons.org/openjdk' },
+  { id: 17, label: 'GraphQL', iconUrl: 'https://cdn.simpleicons.org/graphql' },
+  { id: 18, label: 'Material UI', iconUrl: 'https://cdn.simpleicons.org/mui' }
 ];
 
 export const CAROUSEL_IMAGES = [
-  { src: '/assets/elchemy-ss1.png', alt: 'Image 1' },
-  { src: '/assets/elchemy-ss2.png', alt: 'Image 2' },
-  { src: '/assets/mitsu-ss2.png', alt: 'Image 3' },
-  { src: '/assets/mitsu-ss3.png', alt: 'Image 4' },
-  { src: '/assets/coditas.jpg', alt: 'Image 5' }
+  { src: '/assets/images/elchemy-ss1.png', alt: 'NDA project preview 1' },
+  { src: '/assets/images/elchemy-ss2.png', alt: 'NDA project preview 2' },
+  { src: '/assets/images/mitsu-ss2.png', alt: 'NDA project preview 3' },
+  { src: '/assets/images/mitsu-ss3.png', alt: 'NDA project preview 4' },
+  { src: '/assets/images/mitsu-ss4.png', alt: 'NDA project preview 5' },
+  { src: '/assets/images/coditas.jpg', alt: 'Component library preview' }
 ];
 
 export const PROJECTS_MAP = [
   {
     id: 1,
-    label: 'Vendor Management System',
-    client: 'Elchemy',
-    desc: "As a part of team, we developed an application to automate the manual process of registration, validation, and approval of an order for export/import. This was achieved using a combination of React Hook Form, APIs, and Data Grid. I utilized React Hook Form to create and manage forms in the application. The application followed a proper folder structure that helped in storing the common components at one place. This approach promotes code reusability and scalability, making the code cleaner and more maintainable. I maintained regular communications with the client about the scope of particular features, backend dependencies, bug fixes, and estimations. This ensured that the application was built according to the client's requirements and expectations.",
-    image: '/assets/elchemy.webp',
-    link: null,
-    repo: null
+    label: 'THG Storefront Migration Suite',
+    client: 'THG',
+    desc: 'Migrated high-traffic e-commerce storefronts to Altitude architecture and shipped personalization, performance, and checkout improvements across luxury and nutrition portfolios.',
+    image: '/assets/images/lookfantastic.webp',
+    link: 'https://www.lookfantastic.com',
+    repo: null,
+    impact:
+      'Migration across Lookfantastic, Dermstore, Cult Beauty, and Myprotein with measurable performance improvements.',
+    stack: ['Astro.js', 'TypeScript', 'Tailwind', 'GraphQL', 'i18n'],
+    isNda: false
   },
   {
     id: 2,
-    label: 'Patient Management System',
-    client: 'Mitsu Care',
-    desc: "Leveraging my expertise in React and web development, I played a key role in the creation and maintenance of Mitsu, a guided self- therapy app designed to empower individuals struggling with anxiety or depression.I spearheaded the development of a comprehensive React - based admin dashboard, meticulously crafted to streamline data management, user authentication, and authorization.This intricate dashboard served as the backbone of the app's administrative operations, ensuring seamless user management and secure access control. Additionally, I crafted a dedicated therapist dashboard, complete with detailed patient user profiles, empowering mental health professionals to effectively track and manage their clients' progress.Furthermore, I meticulously optimized all components to ensure seamless compatibility across diverse browsers and devices, guaranteeing an exceptional user experience for all Mitsu users.",
-    image: '/assets/mitsu.png',
+    label: 'AI Virtual Makeup Assistant',
+    client: 'Hackathon Build',
+    desc: 'Built an AI assistant for lipstick shade recommendations using facial analysis and personalization prompts, focused on reducing decision friction in beauty shopping.',
+    image: '/assets/images/mitsu.png',
     link: null,
-    repo: null
+    repo: null,
+    impact: 'Delivered personalized recommendations and secured 2nd place in hackathon.',
+    stack: ['React.js', 'Computer Vision APIs', 'AI Personalization'],
+    isNda: false
   },
   {
     id: 3,
-    label: 'A NextGen Video Creation & Editor App',
-    client: 'VideoVerse TITAN',
-    desc: 'In a recent project, I was part of a team that developed a cutting-edge sports event highlight generation platform. This platform was designed to orchestrate a skilled team and leverage AWS infrastructure to deliver dynamic, shareable highlights for live sporting events. The platform was designed to ingest broadcast streams, identify valuable match moments through AI-trained computer vision, and then encode delivery streams with metadata across user devices. I also collaborated with the team on resolving major priority functional and UI bugs in the project. This collaborative effort ensured that the platform was bug-free and provided a seamless user experience.',
-    image: '/assets/videoverse.png',
+    label: 'Healthcare Admin Dashboard',
+    client: 'Mitsu Care',
+    desc: 'Developed React-based admin workflows for managing users, records, and role-based access with forms and data-table heavy views.',
+    image: '/assets/images/mitsu.png',
     link: null,
-    repo: null
+    repo: null,
+    impact: 'Improved operational efficiency by centralizing workflows into one secure dashboard.',
+    stack: ['React.js', 'React Hook Form', 'TanStack Table', 'RBAC'],
+    isNda: true
   },
   {
     id: 4,
-    label: 'Widefield',
-    client: 'Widefield',
-    desc: "Widefield is an security management system which aims at providing security solutions for users connected across different devices. To guarantee the integrity and reliability of the application's codebase, I meticulously crafted Jest test cases for both individual components and overarching main views. These comprehensive test cases thoroughly examined every facet of the application's functionality, ensuring that each component and view behaved as intended. By implementing a rigorous testing methodology, I effectively safeguarded the application's stability and robustness, preventing potential issues from reaching production and impacting user experience. My dedication to comprehensive testing practices contributed significantly to the delivery of a high-quality, bug-free application.",
-    image: '/assets/widefield-logo.jpg',
-    link: null,
-    repo: null
+    label: 'Kanban Task Management App',
+    client: 'Personal Project',
+    desc: 'Created a lightweight Kanban app with drag-and-drop interactions and optimized state updates for smooth task movement across multiple stages.',
+    image: '/assets/images/kanban.webp',
+    link: 'https://kanban-task-management-saurabh.vercel.app/',
+    repo: null,
+    impact:
+      'Improved usability and responsiveness of board interactions under frequent state changes.',
+    stack: ['React.js', 'Zustand', 'Tailwind CSS', 'DnD'],
+    isNda: false
   },
   {
     id: 5,
-    label: 'Connect',
-    client: 'Coditas',
-    desc: 'To explore the potential of real-time chat capabilities, I embarked on the development of a proof-of-concept (POC) web application utilizing Next.js and Web Sockets. This project involved integrating the application with the WhatsApp API, enabling seamless communication with WhatsApp accounts. To achieve this integration, I conducted thorough research on Web Sockets, gaining a comprehensive understanding of their implementation and application. By leveraging this knowledge, I successfully integrated the WhatsApp API into the POC, enabling users to effortlessly send and receive messages directly from their WhatsApp accounts within the web application. This innovative approach not only enhanced the user experience but also demonstrated the feasibility of incorporating real-time chat features into web applications.',
-    image: '/assets/coditas.jpg',
-    link: null,
-    repo: null
-  },
-  {
-    id: 6,
     label: 'Components Library',
     client: '@saurabh-chauhan/sc-components-library',
-    desc: 'Aspiring to create a foundational resource for React developers, I embarked on the development of a high-quality, generic React components library and published library to npmjs. Guided by principles of accessibility and code quality, I meticulously crafted components that are not only flexible and customizable but also adhere to the highest standards of accessibility. Each component was meticulously designed and extensively tested to ensure seamless integration and optimal performance, empowering developers to build a wide variety of applications with ease and efficiency. By prioritizing accessibility and code quality, I created a valuable asset for the React community, enabling developers to create accessible and robust applications with minimal effort.',
-    image: '/assets/coditas.jpg',
+    desc: 'Designed and published a reusable React component library focused on flexibility, accessibility, and scalable design-system patterns.',
+    image: '/assets/images/coditas.jpg',
     link: 'https://www.npmjs.com/package/@saurabh-chauhan/sc-components-library',
-    repo: null
+    repo: null,
+    impact: 'Accelerated UI delivery by standardizing reusable components and patterns.',
+    stack: ['React.js', 'TypeScript', 'Storybook-style patterns', 'Accessibility'],
+    isNda: false
   }
 ];

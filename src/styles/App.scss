@@ -80,8 +80,34 @@
   background: var(--background);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   display: flex;
   flex-direction: column;
-  user-select: none;
+  transition: background 300ms ease;
+}
+
+.app[data-weather='rainy'] {
+  --weather-overlay: radial-gradient(circle at 20% 10%, rgba(52, 211, 153, 0.09), transparent 30%);
+}
+
+.app[data-weather='cloudy'] {
+  --weather-overlay: radial-gradient(circle at 80% 10%, rgba(167, 243, 208, 0.08), transparent 40%);
+}
+
+.app[data-weather='clear'] {
+  --weather-overlay: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.1), transparent 38%);
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--weather-overlay);
+  z-index: 0;
+}
+
+.app > * {
+  position: relative;
+  z-index: 1;
 }

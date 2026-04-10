@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import path from "path";
+import path from 'path';
 import { defineConfig } from 'vite';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
@@ -9,11 +9,21 @@ export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     outDir: 'build',
+    assetsDir: 'assets',
+    cssMinify: true,
+    cssCodeSplit: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
   },
   server: {
     port: 3000,

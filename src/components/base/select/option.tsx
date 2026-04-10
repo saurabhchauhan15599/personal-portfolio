@@ -1,4 +1,4 @@
-import { GreenTickIcon } from '@saurabh-chauhan/sc-components-library';
+import { Check } from 'lucide-react';
 import { MouseEvent, useCallback, useMemo } from 'react';
 import { GroupBase, OptionProps, components } from 'react-select';
 import CheckboxLabel from '../checkbox/checkbox-label';
@@ -33,7 +33,7 @@ function Option<
       ) : (
         label
       )}
-      {isMulti ? null : isSelected ? <GreenTickIcon /> : null}
+      {isMulti ? null : isSelected ? <Check className="h-4 w-4 text-green-500" /> : null}
     </components.Option>
   );
 }

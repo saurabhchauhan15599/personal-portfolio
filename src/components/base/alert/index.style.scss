@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-style: normal;
   font-weight: 400;
   font-size: 14;
@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: flex-start;
     border-radius: 50%;
+
     .alert-icon {
       display: block;
       object-fit: contain;
@@ -28,6 +29,7 @@
       max-height: 100%;
     }
   }
+
   .alert-message {
     align-self: stretch;
     display: flex;
@@ -38,6 +40,7 @@
     background-color: inherit;
     border-radius: inherit;
   }
+
   .alert-close-icon-wrapper {
     margin-left: auto;
     align-self: flex-start;
@@ -51,6 +54,7 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
+
     .alert-icon {
       display: block;
       object-fit: contain;
@@ -62,7 +66,7 @@
 }
 
 .alert-title-root {
-  font-family: $font-family-poppins;
+  font-family: $font-family-body;
   font-size: 14px;
   font-weight: 700;
   color: inherit;

@@ -16,7 +16,7 @@
 
 html body {
   color: $text-color;
-  font-family: $font-family-source-code, monospace;
+  font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -25,7 +25,20 @@ html body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  overflow: auto;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
 }
 
 input::-ms-reveal,
@@ -77,30 +90,44 @@ a {
 }
 
 [data-theme='dark'] {
-  --text-primary: #ffffff;
-  --text-secondary: #5c5c5c;
-  --accent: darkred;
-  --boxShadow-color1: rgb(168, 161, 161);
-  --boxShadow-color2: rgb(168, 161, 161);
-  --form-fields-background-color: lightgray;
-  --table-header-color: #302d2d;
-  --table-background: rgb(110, 105, 105);
-  --table-border: rgb(182, 167, 167);
-  --data-not-found-heading: #ffffff;
-  --background: url('https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg');
+  --text-primary: #f6faf8;
+  --text-secondary: #c2d2cb;
+  --text-muted: #8ca39a;
+  --accent-color: #2dd4a0;
+  --card-border: #33473f;
+  --surface-elevated: rgba(18, 27, 24, 0.9);
+  --header-surface: rgba(14, 22, 20, 0.86);
+  --soft-shadow: 0 20px 45px rgba(2, 8, 7, 0.42);
+  --background: linear-gradient(150deg, #101816 0%, #18211f 55%, #1f2a27 100%);
+  --weather-overlay: radial-gradient(circle at 18% 8%, rgba(45, 212, 160, 0.08), transparent 34%);
+
+  --boxShadow-color1: rgba(52, 211, 153, 0.15);
+  --boxShadow-color2: rgba(52, 211, 153, 0.1);
+  --form-fields-background-color: #151d1a;
+  --table-header-color: #1f302a;
+  --table-background: #111a17;
+  --table-border: #2d453d;
+  --data-not-found-heading: #e2f5ea;
 }
 
 [data-theme='light'] {
-  --background: url('https://tailwindcss.com/_next/static/media/hero@75.b2469a49.jpg');
-  --text-primary: #363537;
-  --text-secondary: #b9b9b9;
-  --accent: darkred;
-  --boxShadow-color1: #1018281a;
-  --boxShadow-color2: #1018280f;
+  --background: linear-gradient(145deg, #f8faf9 0%, #f0f5f2 58%, #e8f0ec 100%);
+  --text-primary: #182420;
+  --text-secondary: #34463f;
+  --text-muted: #5f746b;
+  --accent-color: #0f9f73;
+  --card-border: #d5e0da;
+  --surface-elevated: rgba(255, 255, 255, 0.94);
+  --header-surface: rgba(245, 250, 247, 0.9);
+  --soft-shadow: 0 18px 34px rgba(8, 26, 18, 0.1);
+  --weather-overlay: radial-gradient(circle at 22% 8%, rgba(15, 159, 115, 0.08), transparent 36%);
 
-  --table-header-color: #71b8f3;
-  --table-background: #f2f8fd;
-  --table-border: black;
+  --boxShadow-color1: rgba(4, 120, 87, 0.12);
+  --boxShadow-color2: rgba(4, 120, 87, 0.08);
+
+  --table-header-color: #d9efe6;
+  --table-background: #f4faf7;
+  --table-border: #b6d2c7;
   --form-fields-background-color: white;
-  --data-not-found-heading: #2196f3;
+  --data-not-found-heading: #1f4336;
 }

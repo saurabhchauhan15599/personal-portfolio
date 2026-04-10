@@ -1,31 +1,28 @@
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useContext } from 'react';
-import { DARK_MODE_MAP, skillsArray } from '../../../helpers/constant';
-import { AppContext } from '../../../helpers/hooks/AppContext';
+import { skillsArray } from '../../../helpers/constant';
 import Typography from '../../base/typography';
 import css from './index.module.scss';
 
 const Skills = () => {
-  const { appState } = useContext(AppContext);
-  const { toggleTheme } = appState;
-  const { theme } = toggleTheme;
-  const mobileLayout = useMediaQuery('(max-width:480px)');
-  const tabletLayout = useMediaQuery('(max-width:768px)');
-
   return (
     <section className={css.skills} id="skills-section">
-      <section className={css.title}>
-        <Typography className={css.label}>Skills,</Typography>
+      <section className={css.titleSection}>
+        <Typography variant="h2" className={css.label}>
+          Skills
+        </Typography>
+        <div className={css.accentLine} />
       </section>
       <div className={css.skillsContainer}>
-        {skillsArray.map((val, index) => {
+        {skillsArray.map((val) => {
           return (
-            <div key={index} className={css.subContainer}>
-              <val.element
-                height={mobileLayout ? 80 : tabletLayout ? 150 : ''}
-                data-tooltip-target={`tooltip-animation-${index}`}
-                color={theme === DARK_MODE_MAP.dark ? '#ffffff' : '#000000'}
+            <div key={val.id} className={css.subContainer}>
+              <img
+                src={val.iconUrl}
+                alt={val.label}
+                className={css.skillIcon}
+                data-tooltip-target={`tooltip-animation-${val.id}`}
+                loading="lazy"
               />
+              <Typography className={css.skillLabel}>{val.label}</Typography>
             </div>
           );
         })}

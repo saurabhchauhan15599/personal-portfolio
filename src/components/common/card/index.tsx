@@ -9,11 +9,18 @@ interface ICardProps {
 
 const Card = (props: ICardProps) => {
   const { children, className, onClick } = props;
+  const clickable = Boolean(onClick);
 
   return (
-    <div onClick={onClick} className={`${css.cardContainer} ${className}`} aria-hidden>
+    <button
+      type="button"
+      onClick={onClick}
+      className={`${css.cardContainer} ${className}`}
+      disabled={!clickable}
+      aria-label={clickable ? 'Open project details' : undefined}
+    >
       {children}
-    </div>
+    </button>
   );
 };
 

@@ -1,6 +1,5 @@
-import { ChevronUpIcon } from '@saurabh-chauhan/sc-components-library';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { components, DropdownIndicatorProps, GroupBase } from 'react-select';
-import ChevronDown from '../../../assets/icons/ChevronDown';
 
 function DropdownIndicator<
   Option,
@@ -11,7 +10,7 @@ function DropdownIndicator<
   const { menuIsOpen } = selectProps;
   return (
     <components.DropdownIndicator {...props}>
-      {menuIsOpen ? <ChevronUpIcon /> : <ChevronDown />}
+      {menuIsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown />}
     </components.DropdownIndicator>
   );
 }

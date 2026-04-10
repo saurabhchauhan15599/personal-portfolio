@@ -1,24 +1,27 @@
 import React from 'react';
+import Typography from '../../base/typography';
 import css from './index.module.scss';
-import { Typography } from '@saurabh-chauhan/sc-components-library';
 
 const Description: React.FC = () => {
   return (
     <div className={css.descContainer} id="description-section">
-      <div>
-        <Typography className={css.title}>About, </Typography>
-      </div>
+      <section className={css.titleSection}>
+        <Typography variant="h2" className={css.title}>
+          About
+        </Typography>
+        <div className={css.accentLine} />
+      </section>
       <div>
         <Typography className={css.label}>
-          Energetic software developer with experience in developing high-performance web
-          technologies,
+          Frontend-focused engineer with 4 years of experience building modern, scalable products.
         </Typography>
         <Typography className={css.label}>
-          <span className={css.secondarylabel}>Team player</span> with a will-do attitude,
+          Currently shipping for global e-commerce brands at THG across architecture migration,
+          <span className={css.secondarylabel}> Core Web Vitals </span> and secure feature delivery.
         </Typography>
         <Typography className={css.label}>
-          <span className={css.secondarylabel}>excellent communication</span> & software design
-          skills with a <span className={css.secondarylabel}>strong user focus.</span>
+          I care about performance, DX, and thoughtful UI details that make products feel fast and
+          trustworthy.
         </Typography>
       </div>
     </div>

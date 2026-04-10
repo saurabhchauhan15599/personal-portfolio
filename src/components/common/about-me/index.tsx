@@ -1,32 +1,37 @@
-import { useMediaQuery } from '@mui/material';
-import { Typography } from '@saurabh-chauhan/sc-components-library';
+import { ChevronDown } from 'lucide-react';
 import React, { useContext } from 'react';
-import ChevronDown from '../../../assets/icons/ChevronDown';
 import { AppContext } from '../../../helpers/hooks/AppContext';
+import Typography from '../../base/typography';
 import css from './index.module.scss';
 
 const AboutMe: React.FC = () => {
   const { appState } = useContext(AppContext);
   const { toggleTheme } = appState;
   const { theme } = toggleTheme;
-  const mobileLayout = useMediaQuery('(max-width:480px)');
-  const tabletLayout = useMediaQuery('(max-width:768px)');
 
   return (
     <div className={css.aboutContainer} id="aboutMe-section">
       <section className={css.subcontainer}>
-        <Typography className={css.label}>Hello, </Typography>
-        <Typography className={css.label}>
-          I am, <span className={css.secondarylabel}>Saurabh</span>
-          <span className={css.svg}>
-            <ChevronDown
-              height={mobileLayout ? 30 : tabletLayout ? 50 : ''}
-              className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300"
-              color={theme === 'dark' ? '#D2FF85' : '#0EB1D2'}
-            />
-          </span>
+        <Typography className={css.greeting}>Hi, I am</Typography>
+        <section className={css.titleSection}>
+          <Typography className={css.label}>
+            <span className={css.secondarylabel}>Saurabh Chauhan</span>
+          </Typography>
+          <div className={css.accentLine} />
+        </section>
+        <Typography className={css.role}>Frontend Engineer</Typography>
+        <Typography className={css.caption}>
+          Building high-traffic e-commerce experiences with performance, personalization, and
+          reliability in mind.
         </Typography>
-        <Typography className={css.label}>Software Developer </Typography>
+        <span className={css.svg}>
+          <ChevronDown
+            className="transition ease-in-out hover:-translate-y-1 hover:duration-300"
+            color={theme === 'dark' ? '#34d399' : '#0f766e'}
+            size={48}
+            strokeWidth={2.5}
+          />
+        </span>
       </section>
     </div>
   );
