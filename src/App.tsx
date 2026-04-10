@@ -10,6 +10,7 @@ import notify from './helpers/toastify-helper';
 import RoutesComp from './router/routes';
 import { getCurrentWeather } from './services/weather.service';
 import './styles/App.scss';
+import { Analytics } from '@vercel/analytics/next';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light');
@@ -29,8 +30,9 @@ function App() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const data = await getCurrentWeather(`${latitude}`, `${longitude}`);
-        const currentWeather = (data as { weather?: Array<{ main?: string }> })?.weather?.[0]?.main
-          ?.toLowerCase?.() ?? 'default';
+        const currentWeather =
+          (data as { weather?: Array<{ main?: string }> })?.weather?.[0]?.main?.toLowerCase?.() ??
+          'default';
 
         if (currentWeather.includes('rain')) setWeatherTag('rainy');
         else if (currentWeather.includes('cloud')) setWeatherTag('cloudy');
@@ -78,6 +80,7 @@ function App() {
               closeOnClick={false}
               limit={2}
             />
+            <Analytics />
           </AppContextProvider>
         </Router>
       </HelmetProvider>
