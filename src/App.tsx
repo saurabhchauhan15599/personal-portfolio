@@ -10,7 +10,7 @@ import notify from './helpers/toastify-helper';
 import RoutesComp from './router/routes';
 import { getCurrentWeather } from './services/weather.service';
 import './styles/App.scss';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light');
